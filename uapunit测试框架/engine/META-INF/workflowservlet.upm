@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding='gb2312'?>
+<module name="uap.workflow.servlet">
+    <public>
+    	<component accessProtected="false"  name="metadataservlet" remote="false" singleton="false" tx="NONE">
+	      <implementation>uap.workflow.servlet.MetadataUtil</implementation>
+	    </component>
+    </public>
+</module>

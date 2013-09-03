@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+	<test name="Test">
+		<packages>
+			<package name="nc.tc.uap.workflow.engine.command" /> 
+			<package name="nc.tc.uap.workflow.admin" /> 
+		</packages>
+		<!-- 
+		<classes>
+			<class name = "nc.tc.uap.workflow.admin.IWFEngineServiceTest" /> 
+			<methods>
+				<include name="getWorkflowComplex" />
+				<include name="afterAddSign" />
+				<include name="beforeAddSign" />
+				<include name="cancelSubmitWorkflow" />
+				<include name="checkUnfinishedWorkitem" />
+				<include name="delegateTask" />
+				
+				<include name="forwardWorkflow" />
+				<include name="getTasks" />
+				<include name="getWorkflowItemsOnStart" />
+				
+				<include name="getWorkitem" />
+				<include name="rollbackWorkflow" />
+				<include name="signalWorkflow" />
+				<include name="startWorkflow" />
+				 -->
+				<!-- 这个测试方法可能与其他测试方法有冲突
+				<include name="updataDBSupplierPf" />
+				 -->
+				 <!-- 
+			</methods>
+		</classes>
+		 -->
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+

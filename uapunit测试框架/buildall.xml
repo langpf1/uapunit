@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="test" default="runTestCase" basedir=".">
+
+	<property file="build.properties" />
+
+	<path id="lib.classpath">
+		<fileset dir="${Ant.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${Product.Common.lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${Middleware.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${Framework.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${Modules.lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar" />
+			<include name="**/**/*.jar" />
+		</fileset>
+		<fileset dir="${Modules.Lang.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="external.classpath">
+		<fileset dir="${Product.External.lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="uatlib.classpath">
+		<fileset dir="${uatlib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="enginelib.classpath">
+		<fileset dir="${enginelib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="wfdesignerlib.classpath">
+		<fileset dir="${wfdesignerlib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef classpathref="uatlib.classpath" resource="tasks.properties" />
+	<taskdef classpathref="uatlib.classpath" resource="testngtasks" />
+
+	<target name="init" depends="clean">
+		<!---->
+		<mkdir dir="${lib.dir}" />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${src.classes.dir}" />
+
+		<mkdir dir="${bpmn.test.classes.dir}" />
+		<mkdir dir="${bpmn.test.classes.resources.dir}" />
+
+		<mkdir dir="${engine.test.classes.dir}" />
+		<mkdir dir="${engine.test.classes.resources.dir}" />
+
+		<mkdir dir="${modeler.test.classes.dir}" />
+		<mkdir dir="${modeler.test.classes.resources.dir}" />
+
+		<mkdir dir="${workflowapp.test.classes.dir}" />
+		<mkdir dir="${workflowapp.test.classes.resources.dir}" />
+
+		<mkdir dir="${ncappadapter.test.classes.dir}" />
+		<mkdir dir="${ncappadapter.test.classes.resources.dir}" />
+
+		<mkdir dir="${ncworklist.test.classes.dir}" />
+		<mkdir dir="${ncworklist.test.classes.resources.dir}" />
+
+		<mkdir dir="${ncparticipantimpl.test.classes.dir}" />
+		<mkdir dir="${ncparticipantimpl.test.classes.resources.dir}" />
+
+		<mkdir dir="${bizimpl.test.classes.dir}" />
+		<mkdir dir="${bizimpl.test.classes.resources.dir}" />
+
+		<mkdir dir="${src.instrument.classes.dir}" />
+		<mkdir dir="${src.instrument.engine.classes.dir}" />
+		<mkdir dir="${src.instrument.workflowapp.classes.dir}" />
+
+
+		<mkdir dir="${instrumented.classes.resources.dir}" />
+
+		<mkdir dir="${instrumented.classes.dir}" />
+		<mkdir dir="${instrumented.classes.resources.dir}" />
+
+		<mkdir dir="${reports.dir}" />
+		<mkdir dir="${testng.output.dir}" />
+		<copy todir="${testng.output.dir}" file="${testng.email}" />
+
+	</target>
+
+	<target name="clean" description="Remove all files created by the build/test process">
+		<!---->
+		<delete dir="${lib.dir}" />
+		<delete dir="${build.dir}" />
+		<delete dir="${src.classes.dir}" />
+		<delete dir="${instrumented.classes.dir}" />
+
+
+		<delete dir="${bpmn.test.classes.dir}" />
+		<delete dir="${bpmn.test.classes.resources.dir}" />
+
+		<delete dir="${engine.test.classes.dir}" />
+		<delete dir="${engine.test.classes.resources.dir}" />
+
+		<delete dir="${modeler.test.classes.dir}" />
+		<delete dir="${modeler.test.classes.resources.dir}" />
+
+		<delete dir="${workflowapp.test.classes.dir}" />
+		<delete dir="${workflowapp.test.classes.resources.dir}" />
+
+		<delete dir="${ncappadapter.test.classes.dir}" />
+		<delete dir="${ncappadapter.test.classes.resources.dir}" />
+
+		<delete dir="${ncworklist.test.classes.dir}" />
+		<delete dir="${ncworklist.test.classes.resources.dir}" />
+
+		<delete dir="${ncparticipantimpl.test.classes.dir}" />
+		<delete dir="${ncparticipantimpl.test.classes.resources.dir}" />
+
+		<delete dir="${bizimpl.test.classes.dir}" />
+		<delete dir="${bizimpl.test.classes.resources.dir}" />
+
+		<delete dir="${src.instrument.classes.dir}" />
+		<delete dir="${src.instrument.engine.classes.dir}" />
+		<delete dir="${src.instrument.workflowapp.classes.dir}" />
+
+
+		<delete dir="${instrumented.classes.resources.dir}" />
+
+		<delete dir="${instrumented.classes.dir}" />
+		<delete dir="${instrumented.classes.resources.dir}" />
+
+		<delete dir="${reports.dir}" />
+		<delete dir="${testng.output.dir}" />
+
+	</target>
+
+	<target name="updateView" depends="init">
+		<ccupdate viewpath="D:/kongxl/View/TEMP_WORKFLOW_dev" graphical="false" log="log.log" overwrite="true" currenttime="ture" rename="false" />
+	</target>
+	
+
+	<target name="compilesrc" depends="init,copyjar">
+		<javac srcdir="./" destdir="${src.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/src/**/public/**/*.java" />
+			<include name="**/src/**/private/**/*.java" />
+			<include name="**/src/**/client/**/*.java" />
+			<include name="**/src/**/public/**/*.java" />
+			<include name="**/src/wftest/**/*.java" />
+			<include name="wfdesigner/src/**/*.java" />
+			<exclude name="**/src/test/**/*.java" />
+			<classpath refid="enginelib.classpath" />
+			<classpath refid="wfdesignerlib.classpath" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+		</javac>
+
+
+		<!--
+			<javac srcdir="${src.bpmn}" destdir="${bpmn.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.engine}" destdir="${engine.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath location="${bpmn.src.classes.dir}">
+				</classpath>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.workflowapp}" destdir="${workflowapp.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.modeler}" destdir="${modeler.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath location="${engine.src.classes.dir}">
+				</classpath>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.ncworklist}" destdir="${ncworklist.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath location="${workflowapp.src.classes.dir}">
+				</classpath>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.ncparticipantimpl}" destdir="${ncparticipantimpl.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath location="${engine.src.classes.dir}">
+				</classpath>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.ncappadapter}" destdir="${ncappadapter.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath location="${engine.src.classes.dir}">
+				</classpath>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+
+			<javac srcdir="${src.bizimpl}" destdir="${bizimpl.src.classes.dir}" debug="yes">
+				<include name="**/src/**/public/**/*.java"/>
+				<include name="**/src/**/private/**/*.java"/>
+				<include name="**/src/**/client/**/*.java"/>
+				<include name="**/src/**/public/**/*.java"/>
+				<classpath location="${engine.src.classes.dir}">
+				</classpath>
+				<classpath location="${workflowapp.src.classes.dir}">
+				</classpath>
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<copy todir="${src.test.classes.resources.dir}" overwrite="true">
+				<fileset dir="${resources.dir}">
+				</fileset>
+			</copy>
+			<copy todir="${src.test.classes.dir}" file="${src.test.dir}/log4j.xml" overwrite="true" />
+		</target>
+
+		<target name="compiletestsrc" depends="compilesrc">
+			<javac srcdir="${src.engine}" destdir="${engine.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.modeler}" destdir="${modeler.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.workflowapp}" destdir="${workflowapp.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.ncworklist}" destdir="${ncworklist.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.ncparticipantimpl}" destdir="${ncparticipantimpl.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.ncappadapter}" destdir="${ncappadapter.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			<javac srcdir="${src.bizimpl}" destdir="${bizimpl.test.classes.dir}" debug="yes">
+				<exclude name="**/src/**/public/**/*.java" />
+				<exclude name="**/src/**/private/**/*.java" />
+				<exclude name="**/src/**/client/**/*.java" />
+				<exclude name="**/src/**/public/**/*.java" />
+				<include name="**/src/**/test/**/*.java" />
+				<classpath refid="lib.classpath" />
+				<classpath refid="external.classpath" />
+			</javac>
+			-->
+	</target>
+
+	<target name="compileInstrumented" depends="compilesrc">
+		<javac srcdir="./" destdir="${src.instrument.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/engine/src/public/**/*.java" />
+			<include name="**/engine/src/private/**/*.java" />
+			<include name="**/engine/src/client/**/*.java" />
+			<include name="**/WorkflowApp/src/public/**/*.java" />
+			<include name="**/WorkflowApp/src/private/**/*.java" />
+			<include name="**/WorkflowApp/src/client/**/*.java" />
+			<exclude name="**/src/test/**/*.java" />
+			<exclude name="**/src/wftest/**/*.java" />
+			<classpath location="${src.classes.dir}" />
+
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+		</javac>
+
+		<javac srcdir="./" destdir="${src.instrument.engine.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/engine/src/public/**/*.java" />
+			<include name="**/engine/src/private/**/*.java" />
+			<include name="**/engine/src/client/**/*.java" />
+			<exclude name="**/src/test/**/*.java" />
+			<exclude name="**/src/wftest/**/*.java" />
+			<classpath location="${src.classes.dir}" />
+
+			<classpath refid="enginelib.classpath" />
+			<classpath refid="wfdesignerlib.classpath" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+		</javac>
+
+		<javac srcdir="./" destdir="${src.instrument.workflowapp.classes.dir}" debug="yes" encoding="GBK">
+
+			<include name="**/WorkflowApp/src/public/**/*.java" />
+			<include name="**/WorkflowApp/src/private/**/*.java" />
+			<include name="**/WorkflowApp/src/client/**/*.java" />
+			<exclude name="**/src/test/**/*.java" />
+			<exclude name="**/src/wftest/**/*.java" />
+			<classpath location="${src.classes.dir}" />
+
+			<classpath refid="enginelib.classpath" />
+			<classpath refid="wfdesignerlib.classpath" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+		</javac>
+	</target>
+
+	<target name="compilesrctest" depends="compileInstrumented">
+
+		<javac srcdir="${src.bpmn}" destdir="${bpmn.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.engine}" destdir="${engine.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.modeler}" destdir="${modeler.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.workflowapp}" destdir="${workflowapp.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.ncappadapter}" destdir="${ncappadapter.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.ncworklist}" destdir="${ncworklist.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.ncparticipantimpl}" destdir="${ncparticipantimpl.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+		<javac srcdir="${src.bizimpl}" destdir="${bizimpl.test.classes.dir}" debug="yes" encoding="GBK">
+			<include name="**/test/**/*.java" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<classpath location="${src.classes.dir}">
+			</classpath>
+		</javac>
+
+
+	</target>
+
+	<target name="copyjar">
+		<copydir dest="./lib" src="./uatlib" forceoverwrite="true">
+		</copydir>
+	</target>
+
+	<target name="copyResourcesfile" depends="compilesrctest">
+
+		<copydir dest="${workflowapp.test.classes.resources.dir}" src="${src.workflowapp}/test/resources" forceoverwrite="true" />
+		<copydir dest="${engine.test.classes.resources.dir}" src="${src.engine}/test/resources" forceoverwrite="true" />
+		<copy todir="${src.classes.dir}">
+			<fileset dir="${src.engine}/public">
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${src.classes.dir}">
+			<fileset dir="${src.bpmn}/public">
+				<include name="**/*.index" />
+			</fileset>
+		</copy>
+
+		<copy todir="${src.classes.dir}">
+			<fileset dir="${src.engine}/resources">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copylog4j" depends="copyResourcesfile">
+		<copy file="${src.workflowapp}/test/log4j.xml" todir="${workflowapp.test.classes.dir}" overwrite="true">
+		</copy>
+
+		<copy file="${src.engine}/test/log4j.xml" todir="${engine.test.classes.dir}" overwrite="true">
+		</copy>
+	</target>
+
+	<target name="copyfile">
+		<copydir dest="${src.classes.dir}" src="${instrumented.classes.dir}" forceoverwrite="true">
+		</copydir>
+	</target>
+
+
+	<target name="instrument" depends="copylog4j">
+		<delete file="${cobertura.datafile}" />
+		<cobertura-instrument todir="${instrumented.classes.dir}">
+			<ignore regex="org.apache.log4j.*" />
+			<fileset dir="${src.instrument.classes.dir}">
+				<include name="**/*.class" />
+			</fileset>
+		</cobertura-instrument>
+		<!--
+			<cobertura-instrument todir="${instrumented.workflowapp.classes.dir}">
+				<ignore regex="org.apache.log4j.*" />
+				<fileset dir="${src.instrument.workflowapp.classes.dir}">
+					<include name="**/*.class" />
+				</fileset>
+			</cobertura-instrument>
+			<cobertura-instrument todir="${instrumented.engine.classes.dir}">
+				<ignore regex="org.apache.log4j.*" />
+				<fileset dir="${src.instrument.engine.classes.dir}">
+					<include name="**/*.class" />
+				</fileset>
+			</cobertura-instrument>
+				-->
+	</target>
+
+	<target name="runTestCase" depends="instrument,callTestNG" />
+
+	<target name="callTestNG">
+
+		<java fork="false" classname="org.testng.TestNG">
+			<!---->
+			<sysproperty key="net.sourceforge.cobertura.datafile" file="${cobertura.datafile}" />
+			<classpath location="${instrumented.classes.dir}/" />
+			<classpath location="${src.classes.dir}" />
+			<classpath location="${engine.test.classes.dir}" />
+			<classpath location="${workflowapp.test.classes.dir}" />
+
+			<classpath refid="enginelib.classpath" />
+			<classpath refid="wfdesignerlib.classpath" />
+			<classpath refid="lib.classpath" />
+			<classpath refid="external.classpath" />
+			<classpath refid="uatlib.classpath" />
+			<arg value="${testng.file}" />
+
+		</java>
+	</target>
+
+	<target name="importTestResult" description="importTestResult">
+        <echo message="import testResult"></echo>
+     <exec dir="D:\kongxl\ptr\" executable="cmd">
+                  <arg line="/c ptrer.bat workFlowTest"/>
+      </exec>
+    </target>
+</project>

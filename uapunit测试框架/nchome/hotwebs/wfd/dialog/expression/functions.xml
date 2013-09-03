@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+	<functionGroup name="串函数" funcname="stringFunc">
+		<function prefix="" name="取子串" funcname="subString" prototype="subString(start, length, string)" desc="subString(int.class, int.class, String.class)" />
+		<function prefix="" name="拼接子串" funcname="concat" prototype="concat(string, string)" desc="concat(String.class, String.class)" />
+		<function prefix="" name="包含" funcname="contains" prototype="contains(string, string)" desc="contains(String.class, String.class)" />
+		<function prefix="" name="替换" funcname="replace" prototype="replace(string, string)" desc="replace(String.class, String.class)" />
+		<function prefix="" name="转为字符串" funcname="valueOf" prototype="valueof(Object)" desc="valueof(Object.class)" />
+
+		<function prefix="" name="查找字符" funcname="charAt" prototype="charAt(string, pos)" desc="charAt(String.class, int.class)" />
+		<function prefix="" name="以...结尾" funcname="endsWith" prototype="endsWith(string, string)" desc="endsWith(String.class, String.class)" />
+		<function prefix="" name="是否相等(忽略大小写)" funcname="equalsIgnoreCase" prototype="equalsIgnoreCase(string, string)" desc="equalsIgnoreCase(String.class, String.class)" />
+		<function prefix="" name="查找位置" funcname="indexof" prototype="indexof(string, string)" desc="indexof(String.class, String.class)" />
+		<function prefix="" name="从最后查找" funcname="lastindexof" prototype="lastindexof(string, string)" desc="lastindexof(String.class, String.class)" />
+		<function prefix="" name="取子串（从左）" funcname="left" prototype="left(string, pos)" desc="left(String.class, int.class)" />
+		<function prefix="" name="从左边取串(填充)" funcname="leftStr" prototype="leftStr(string, pos, string)" desc="leftStr(String.class, int.class, String.class)" />
+		<function prefix="" name="串长" funcname="length" prototype="length(string)" desc="length(String.class)" />
+		<function prefix="" name="取子串" funcname="mid" prototype="mid(string, pos, length)" desc="mid(String.class, int.class, int.class)" />
+		<function prefix="" name="取子串（从右边）" funcname="right" prototype="right(string, length)" desc="right(String.class, int.class)" />
+		<function prefix="" name="取子串（填充）" funcname="rightStr" prototype="rightStr(string, pos, string)" desc="rightStr(String.class, int.class, String.class)" />
+		<function prefix="" name="是否以...开头" funcname="startswith" prototype="startswith(string, string)" desc="startswith(String.class, String.class)" />
+		<function prefix="" name="转十进制" funcname="todecimal" prototype="todecimal(string)" desc="todecimal(String.class)" />
+		<function prefix="" name="转小写" funcname="toLowerCase" prototype="toLowerCase(string)" desc="toLowerCase(String.class)" />
+		<function prefix="" name="转为串" funcname="tostring" prototype="tostring(Object)" desc="tostring(Object.class)" />
+		<function prefix="" name="转大写" funcname="touppercase" prototype="touppercase(string)" desc="touppercase(String.class)" />
+		<function prefix="" name="去掉空字符" funcname="trimzero" prototype="trimzero(string)" desc="trimzero(String.class)" />
+	</functionGroup>
+	<functionGroup name="日期时间函数" funcname="dateFunc">
+		<function prefix="" name="日期比较" funcname="compareDate" prototype="compareDate(Object.class, Object, Object)" desc="compareDate(Object.class, Object.class, Object.class)" /> 
+		<function prefix="" name="取当前日期" funcname="date" prototype="date()" desc="date()" /> 
+		<function prefix="" name="日期相加" funcname="dateAdd" prototype="dateAdd(Object.class, Object.class, Object.class)" desc="dateAdd(Object.class, Object.class, Object.class)" /> 
+		<function prefix="" name="格式化日期" funcname="formatDate" prototype="" desc="formatDate(Object.class, Object.class)" /> 
+		<function prefix="" name="取日期时间" funcname="datetime" prototype="" desc="datetime()" /> 
+		<function prefix="" name="取哪一天" funcname="dayof" prototype="" desc="dayof(Object.class)" /> 
+		<function prefix="" name="取当前时间" funcname="time" prototype="" desc="time()" />
+		<function prefix="" name="取当前年" funcname="year" prototype="" desc="year()" />
+		<function prefix="" name="取年" funcname="yearof" prototype="" desc="yearof(Object.class)" />
+		<function prefix="" name="转为日期" funcname="todate" prototype="" desc="todate(Object.class)" />
+		<function prefix="" name="转为日期时间" funcname="todatetime" prototype="" desc="todatetime(Object.class)" />
+		<function prefix="" name="转为时间" funcname="toTime" prototype="" desc="toTime(Object.class)" />
+	</functionGroup>
+	<functionGroup name="数学" funcname="mathFunc">
+		<function prefix="" name="绝对值" funcname="abs" prototype="" desc="abs()" />
+		<function prefix="" name="反余弦" funcname="acos" prototype="" desc="acos()" />
+		<function prefix="" name="acosh" funcname="acosh" prototype="" desc="acosh()" />
+		<function prefix="" name="相加" funcname="add" prototype="" desc="add(,)" />
+		<function prefix="" name="角度" funcname="angle" prototype="" desc="angle(,)" />
+		<function prefix="" name="反正弦" funcname="asin" prototype="" desc="asin()" />
+		<function prefix="" name="asinh" funcname="asinh" prototype="" desc="asinh()" />
+		<function prefix="" name="反正切" funcname="atan" prototype="" desc="atan()" />
+		<function prefix="" name="atanh" funcname="atanh" prototype="" desc="atanh()" />
+		<function prefix="" name="余弦" funcname="cos" prototype="" desc="cos()" />
+		<function prefix="" name="cosh" funcname="cosh" prototype="" desc="cosh()" />
+		<function prefix="" name="除" funcname="div" prototype="" desc="div(,)" />
+		<function prefix="" name="幂" funcname="exp" prototype="" desc="exp()" />
+		<function prefix="" name="取结果" funcname="getresult" prototype="" desc="getresult()" />
+		<function prefix="" name="取整" funcname="int" prototype="" desc="int()" />
+		<function prefix="" name="自然对数" funcname="ln" prototype="" desc="ln()" />
+		<function prefix="" name="对数" funcname="log" prototype="" desc="log()" />
+		<function prefix="" name="取模" funcname="mod" prototype="" desc="mod(,)" />
+		<function prefix="" name="乘" funcname="mul" prototype="" desc="mul(,)" />
+		<function prefix="" name="随机数" funcname="rand" prototype="" desc="rand()" />
+		<function prefix="" name="随机数" funcname="round" prototype="" desc="round(,)" />
+		<function prefix="" name="sgn" funcname="sgn" prototype="" desc="sgn()" />
+		<function prefix="" name="正弦" funcname="sin" prototype="" desc="sin()" />
+		<function prefix="" name="sinh" funcname="sinh" prototype="" desc="sinh()" />
+		<function prefix="" name="平方根" funcname="sqrt" prototype="" desc="sqrt()" />
+		<function prefix="" name="减" funcname="sub" prototype="" desc="sub(,)" />
+		<function prefix="" name="正切" funcname="tan" prototype="" desc="tan()" />
+		<function prefix="" name="tanh" funcname="tanh" prototype="" desc="tanh()" />
+		<function prefix="" name="转为数字" funcname="tonumber" prototype="" desc="tonumber()" />
+		<function prefix="" name="空转为0" funcname="zeroifnull" prototype="" desc="zeroifnull()" />
+	</functionGroup>
+	<functionGroup name="合计函数" funcname="statFunc">
+		<function prefix="" name="取最大值" funcname="max" prototype="" desc="max()" />
+		<function prefix="" name="取最小值" funcname="min"  prototype="" desc="min()" />
+		<function prefix="" name="取平均值" funcname="avarvge"  prototype="" desc="avarvge()" />
+		<function prefix="" name="求和" funcname="sum" prototype="" desc="sum()" />
+	</functionGroup>
+	<functionGroup name="环境变量函数" funcname="envFunc">
+		<function prefix="" name="获取用户编码" funcname="getUserCode" prototype="" desc="getUserCode"/>
+		<function prefix="" name="获取集团编码" funcname="getGroupCode" prototype="" desc="getGroupCode"/>
+		<function prefix="" name="获取业务日期" funcname="getBizDate" prototype="" desc="getBizDate"/>
+		<function prefix="" name="获取业务时间" funcname="getBizDateTime" prototype="" desc="getBizDateTime"/>
+		<function prefix="" name="获取语言编码" funcname="getLangCode" prototype="" desc="getLangCode"/>
+		<function prefix="" name="获取用户标识" funcname="getUserID" prototype="" desc="getUserID"/>
+		<function prefix="" name="获取集团标识" funcname="getGroupID" prototype="" desc="getGroupID"/>		
+	</functionGroup>
+	<functionGroup name="审批变量" funcname="approveResult">
+		<function prefix="" name="审批结果" funcname="getApproveResult" prototype="" desc="getApproveResult(new Class)"/>
+		<function prefix="" name="审批意见" funcname="getApproveNote" prototype="" desc="getApproveNote(new Class)"/>
+		<function prefix="" name="附件" funcname="getAttachments" prototype="" desc="getAttachments(new Class))"/>
+		<function prefix="" name="抄送给" funcname="getCCTo" prototype="" desc="getCCTo(new Class)" />
+		<function prefix="" name="委派给" funcname="getAssignedTo" prototype="" desc="getAssignedTo(Class)" />
+	</functionGroup>
+	<functionGroup name="其他" funcname="otherFunc">
+		<function prefix="" name="按条件选择" funcname="iif" prototype="" desc="iif boolean Object.class Object.class)" />
+		<function prefix="" name="取生单结果" funcname="getExchangedResult" prototype="" desc="getExchangedResult(Map.class,String.class)" />
+	</functionGroup>
+</functions>

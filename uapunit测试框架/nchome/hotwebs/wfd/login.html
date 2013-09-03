@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML5 Admin Simplenso Template">
+  <meta name="author" content="ahoekie">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet" id="main-theme-script">
+  <link href="css/themes/default.css" rel="stylesheet" id="theme-specific-script">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <!-- bootstrap-editable -->
+  <link href="css/bootstrap-editable.css" rel="stylesheet">
+  <!-- Full Calender -->
+  <link href="css/fullcalendar.css" rel="stylesheet" type="text/css" />
+  <link href="css/select2.css" rel="stylesheet">
+  <!-- Bootstrap Date Picker -->
+  <!-- <link href="scripts/datepicker/css/datepicker.css" rel="stylesheet">
+  -->
+  <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+  <!-- <link rel="stylesheet" href="scripts/blueimp-jQuery-File-Upload/css/jquery.fileupload-ui.css">
+  -->
+  <!-- Bootstrap Image Gallery styles -->
+  <link href="css/bootstrap-tags.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+  <link href="css/u9next.css" rel="stylesheet">
+  <!-- Uniform -->
+  <!-- <link rel="stylesheet" type="text/css" media="screen,projection" href="scripts/uniform/css/uniform.default.css" />
+  -->
+  <!-- Chosen multiselect -->
+  <!--link type="text/css" href="scripts/chosen/chosen/chosen.intenso.css" rel="stylesheet" /-->
+  <!-- u9next -->
+  <!-- <link href="css/u9next.css" rel="stylesheet">
+  -->
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="../../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if IE]>
+  <script type="text/javascript" src=js/utils.js></script>
+  <![endif]-->
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="img/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png"></head>
+</head>
+<body id="dashboard">
+  <!-- Main Content Area | Side Nav | Content -->
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span4">&nbsp;</div>
+      <div class="span4">
+        <div class="box" style="margin-bottom:30em;">
+          <h4 class="box-header round-top">登录</h4>
+          <div class="box-container-toggle" >
+            <div class="box-content" >
+              <label>
+                用户名:
+                <input type="text" class="input-small" placeholder="name" id='name'></label>
+              <label>
+                密&nbsp;&nbsp;&nbsp;码:
+                <input type="password" class="input-small" placeholder="Password" id='password'></label>
+              <button type="submit" class="btn" id='login-btn' >登录</button>
+              <label  for="remember">
+                <input  type="checkbox" id="remember" value="option1">记住密码</label>
+              <div class="alert alert-error hide" id="login-error" ></div>
+            </div>
+          </div>
+        </div>
+        <!--/span-->
+        <div class="span4">&nbsp;</div>
+      </div>
+      <!--/span--> </div>
+    <!--/row-->
+    <footer >
+      <p class="pull-right" >&copy; 2013 Design by UAP</p>
+    </footer>
+  </div>
+  <script type="text/javascript" src="js/libs/jquery/jquery-1.9.1.js"></script>
+  <script type="text/javascript">
+  $(document).ready(
+    function(){ 
+      $("#login-btn").click(function(){
+        $.ajax({
+          type:"POST",
+          url:'../wfd/runtime/login/',
+          datatype:"json",
+          data:"{'name':'"+$('#name').val()+"','password':'"+$("#password").val()+"'}",
+          success:function(responseData){
+            document.cookie="name="+responseData.name;
+            
+            window.location.href="index.html";
+          },
+          error:function(error){
+            $("#login-error").text(error.responseText).show();
+
+          }  
+        });
+
+      });
+
+       $("body").keydown(function(e){
+        if(e.keyCode==13)
+        {
+          $.ajax({
+            type:"POST",
+            url:'../wfd/runtime/login/',
+            datatype:"json",
+            data:"{'name':'"+$('#name').val()+"','password':'"+$("#password").val()+"'}",
+            success:function(responseData){
+              document.cookie="name="+responseData.name;
+              
+              window.location.href="index.html";
+            },
+            error:function(error){
+              $("#login-error").text(error.responseText).show();
+
+            }  
+          });
+        }
+      });
+    }
+  );
+  </script>
+</body>
+</html>

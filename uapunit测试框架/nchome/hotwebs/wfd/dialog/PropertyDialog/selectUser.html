@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>selectUser Config</title>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css">
+	<link rel="stylesheet" type="text/css" href="../../css/refcss/wfex.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../../js/libs/easyui/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="../../js/libs/easyui/jquery.easyui.min.js"></script>
+	 <script type="text/javascript">
+		var RESOURCES_PATH = '../../resources';
+		var RESOURCE_BASE = RESOURCES_PATH + '/dialog';
+		var urlParams = (function(url)
+		{	
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+	
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+				
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+					
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+			
+			return result;
+		})(window.location.href);
+		// Sets the base path, the UI language via URL param and configures the
+		// supported languages to avoid 404s. The loading of all core language
+		// resources is disabled as all required resources are in grapheditor.
+		// properties. Note that in this example the loading of two resource
+		// files (the special bundle and the default bundle) is disabled to
+		// save a GET request. This requires that all resources be present in
+		// each properties file since only one file is loaded.
+		mxLoadResources = true
+		mxBasePath = '../../js';
+		mxLanguage = urlParams['lang'];
+		mxLanguages = ['de','zh-cn'];
+    </script>
+	<script type="text/javascript" src="../../js/mxgraph/mxClient.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxEvent.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxXmlRequest.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxUtils.js"></script>
+	<script type="text/javascript">
+	 function LocalResources(){}
+       mxResources.loadDefaultBundle = false;
+ 	   mxResources.add(RESOURCE_BASE); 
+ 	   LocalResources.OK=mxResources.get("ok");      
+	   LocalResources.CANCEL=mxResources.get("cancel");
+	   LocalResources.Filter=mxResources.get('filter');
+	   LocalResources.TITLE=mxResources.get("selectUser Config");
+	   LocalResources.dataLoading=mxResources.get('data loading');
+	   LocalResources.number=mxResources.get('number');
+	   LocalResources.page=mxResources.get('page');
+	   LocalResources.total=mxResources.get('total');
+	   LocalResources.current=mxResources.get('current');
+	   LocalResources.items=mxResources.get('items');
+	   LocalResources.total=mxResources.get('total');
+	   LocalResources.Code=mxResources.get('Code');
+	   LocalResources.Name=mxResources.get('Name');
+	   
+      var pageNumber=null,pageSize=null;
+		function inition(){
+		  mxResources.loadDefaultBundle = false;
+ 		  mxResources.add(RESOURCE_BASE);
+ 		  document.getElementById('filter').innerHTML="<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.Filter+"</SPAN></SPAN>";
+ 		  document.title = LocalResources.TITLE;
+	      document.getElementById('ok').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.OK+"</SPAN></SPAN>";;
+	      document.getElementById('cancel').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.CANCEL+"</SPAN></SPAN>";
+	      $('#dg').datagrid({
+            columns:[[
+             {field:'code',title:LocalResources.Code,width:270,align:'center'},
+             {field:'name',title:LocalResources.Name,width:270,align:'center'}     
+              ]]
+            }); 
+			$('#dg').datagrid({
+				title:LocalResources.TITLE,
+				iconCls:'icon-save',
+				width:'auto',
+				height:410,
+				loading:LocalResources.dataLoading+'......',
+				nowrap: true,
+				autoRowHeight: false,
+				striped: true,
+				collapsible:true,//是否可以折叠
+				fit:false,//自动大小
+				singleSelect:true,//是否单选
+				remoteSort: false,
+				idField:'code',
+				pagination:true,//分页控件
+				rownumbers:true
+			});
+			var p = $('#dg').datagrid('getPager');
+			$(p).pagination({
+			    pageSize:10,//每页显示的记录的条数
+				pageList:[10,15,20],//设置每页记录条数的列表
+				beforePageText:LocalResources.number,
+				afterPageText:LocalResources.page+LocalResources.total+'{pages}'+LocalResources.page,
+				displayMsg:LocalResources.current+'{from}-{to}'+LocalResources.items+' '+LocalResources.total+'{total}'+LocalResources.items,
+				onRefresh:function(pageNumber,pageSize){
+				},
+				onChangePageSize:function(){
+				},
+				onSelectPage:function(pageNumber,pageSize){
+				pageNumber =pageNumber;
+				pageSize = pageSize;
+				   var urlString='/wfd/wf?action=queryuser&kind=participante&';
+				   var filterValue = $('#filterText').searchbox('getValue');
+				   urlString=urlString+'pageNumber='+pageNumber+'&pageSize='+pageSize;
+	               urlString=urlString+'&filterValue='+filterValue;
+				   loaddata(urlString);
+				}
+				
+			});
+		}
+		function onCancel(){
+			window.close(); 
+		}
+		function onOK(){
+		   var row = $('#dg').datagrid('getSelected');
+           window.returnValue=row;
+           window.close(); 
+		}
+	function loaddata(urlString)
+	{  
+		var ParticipanteKind = window.dialogArguments;
+		urlString = urlString+"&ParticipanteKind="+ParticipanteKind.name;
+		mxUtils.post(urlString, '', mxUtils.bind(this, function(req)
+						{
+							if(req.getStatus() != 404)
+							{   
+								var respText = req.request.responseText;
+								var json = eval("("+respText+")");
+								$('#dg').datagrid('loadData',json);
+							}
+						}));
+	}
+	function onFilter(){
+	 var urlString='/wfd/wf?action=queryuser&kind=participante&';
+	 var filterValue = $('#filterText').searchbox('getValue');
+	 urlString=urlString+'pageNumber='+$('#dg').datagrid('getPager').pagination.defaults.pageNumber+'&pageSize='+$('#dg').datagrid('getPager').pagination.defaults.pageSize;
+	 urlString=urlString+'&filterValue='+filterValue;
+	 loaddata(urlString);
+	}
+	</script>
+</head>
+<body class="easyui-layout" onload="inition(),loaddata(urlString='/wfd/wf?action=queryuser&kind=participante')">
+	<div data-options="region:'center'" id="tb" style="padding:5px;height:auto"> 
+	      <input  class="easyui-searchbox" id="filterText" data-options="prompt:'请输入过滤关键字',searcher:onFilter" style="width:180px"></input>
+	      <a href="#" class="easyui-linkbutton" onclick ="onFilter()" iconCls="icon-search" id="filter">filter</a> 
+	      <!--
+		  <select id= "selected" onchange="$('#dg').datagrid({singleSelect:(this.value==0)})"> 
+	      <option value="0">Single Row</option> 
+	      <option value="1">Multiple Rows</option> 
+	      </select> 单选多选模式-->
+	<table id="dg" class="easyui-datagrid"> 
+	</table> 
+	</div> 
+	<div id="dlg-buttons"  data-options="region:'south',split:true" style="height:50px;">
+      <center>
+        <br>
+        <!-- javascript:void(0)与#为当前页 -->
+        <a class="easyui-linkbutton" href="#" id='ok' onclick="onOK()">
+          OK
+        </a>
+        <a class="easyui-linkbutton" href="#" id='cancel' onclick="onCancel()">
+          Cancel
+        </a>
+      </center>
+</body>
+</html>

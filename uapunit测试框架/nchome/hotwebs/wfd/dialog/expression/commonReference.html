@@ -1,0 +1,136 @@
+
+<html>  
+<head>  
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+	<title>refer</title>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css"/>
+	<script type="text/javascript" src="../../js/libs/easyui/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="../../js/libs/easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript">
+		var RESOURCES_PATH = '../../resources';
+		var RESOURCE_BASE = RESOURCES_PATH + '/dialog';
+		var urlParams = (function(url)
+		{	
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+	
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+				
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+					
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+			
+			return result;
+		})(window.location.href);
+		// Sets the base path, the UI language via URL param and configures the
+		// supported languages to avoid 404s. The loading of all core language
+		// resources is disabled as all required resources are in grapheditor.
+		// properties. Note that in this example the loading of two resource
+		// files (the special bundle and the default bundle) is disabled to
+		// save a GET request. This requires that all resources be present in
+		// each properties file since only one file is loaded.
+		mxLoadResources = true
+		mxBasePath = '../../js';
+		mxLanguage = urlParams['lang'];
+		mxLanguages = ['de','zh-cn'];
+    </script>
+	<script type="text/javascript" src="../../js/mxgraph/mxClient.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxEvent.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxXmlRequest.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxResources.js"></script>
+	<script type="text/javascript">
+		function LocalResources(){}
+		
+		mxResources.loadDefaultBundle = false;
+		mxResources.add(RESOURCE_BASE); 
+		
+		LocalResources.OK=mxResources.get("ok");      
+		LocalResources.CANCEL=mxResources.get("cancel");
+		LocalResources.Filter=mxResources.get('filter');
+		LocalResources.TITLE=mxResources.get("refer");
+		LocalResources.code=mxResources.get("Code");
+		LocalResources.name=mxResources.get("Name");
+		
+		var refType = this.dialogArguments;
+		var pageSize = 10;
+		var pageNum = 0;
+		function loadData(){
+			document.title = LocalResources.TITLE;
+			document.getElementById('ok').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.OK+"</SPAN></SPAN>";
+			document.getElementById('cancel').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.CANCEL+"</SPAN></SPAN>";
+			document.getElementById('filter').innerHTML="<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.Filter+"</SPAN></SPAN>";
+			$('#referenceGrid').datagrid({
+				columns:[[
+					{field:'ck',align:'center',editor:'checkbox'},
+					{field:'id',title:'ID',width:0,align:'center'},   
+					{field:'code',title:LocalResources.code,width:80,align:'center'},
+					{field:'name',title:LocalResources.name,width:100,align:'center'}
+            	]]
+			});
+			
+			var url = '/wfd/wf';
+			var req = new mxXmlRequest(url, 
+				"action=referenceUtil&refType=" + refType.attributes.className + 
+				"&pageSize=" + pageSize + 
+				"&pageNum=" + pageNum, null, false);
+			req.send(null, null);
+			var json = eval("(" + req.request.responseText + ")");
+			
+			$('#referenceGrid').datagrid('loadData', json);
+		}
+		
+		function onFliter(){
+			$('#referenceGrid').datagrid({
+				loadFilter:function(data){
+					var filter = document.getElementId("filterEditor").value;
+					if (data.code.startWidth(filter))
+						return data.code;
+					else
+						return data;
+				}
+			});
+		}
+		
+		function onOK(){
+			var selectedRow = $('#referenceGrid').datagrid('getSelected');
+			
+			window.returnValue = selectedRow;
+			window.close();
+		}
+		
+		function onCancel(){
+			window.returnValue = undefined;
+			window.close();
+		}
+	</script>
+</head>  
+<body class="easyui-layout" onload="loadData();">  
+	<div data-options="region:'center'" id="grid" style="height:100%;width:100%"> 
+		<input class="easyui-text" id="filterEditor" style="width:100px" id="filterText"/>
+		<a href="#" class="easyui-linkbutton" onclick ="onFliter()"id='filter' iconCls="icon-search" >filter</a>
+		<div> 
+			<table id="referenceGrid" class="easyui-datagrid" title="" style="width:790px;height:500px"  
+				data-options="rownumbers:true,singleSelect:true,checkOnSelect:true,selectOnCheck:true">  
+			</table>
+		</div>  
+	</div>
+	<div id="dlgbuttons"  data-options="region:'south',split:true" style="height:50px;width:90%">
+		<center>
+			<br/>
+			<a class="easyui-linkbutton" href="#" id='ok' onclick="onOK()">OK</a>
+			<a class="easyui-linkbutton" href="#" id='cancel' onclick="onCancel()">Cancel</a>
+		</center>
+	</div>
+</body>  
+</html>
+

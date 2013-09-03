@@ -1,0 +1,283 @@
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: erm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.erm] DEBUG  - conteiner: erm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.erm] DEBUG  - conteiner: erm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: erm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: eom 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.eom] DEBUG  - conteiner: eom begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.eom] DEBUG  - conteiner: eom end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: eom 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: emm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.emm] DEBUG  - conteiner: emm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.emm] DEBUG  - conteiner: emm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: emm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: egrkaudit 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egrkaudit] DEBUG  - conteiner: egrkaudit begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egrkaudit] DEBUG  - conteiner: egrkaudit end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: egrkaudit 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: egriskmg 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egriskmg] DEBUG  - conteiner: egriskmg begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egriskmg] DEBUG  - conteiner: egriskmg end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: egriskmg 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: egitctrl 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egitctrl] DEBUG  - conteiner: egitctrl begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egitctrl] DEBUG  - conteiner: egitctrl end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: egitctrl 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: egdocmg 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egdocmg] DEBUG  - conteiner: egdocmg begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egdocmg] DEBUG  - conteiner: egdocmg end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: egdocmg 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: egbaseinfo 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egbaseinfo] DEBUG  - conteiner: egbaseinfo begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.egbaseinfo] DEBUG  - conteiner: egbaseinfo end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: egbaseinfo 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: ecp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ecp] DEBUG  - conteiner: ecp begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ecp] DEBUG  - conteiner: ecp end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: ecp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: ebvp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ebvp] DEBUG  - conteiner: ebvp begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ebvp] DEBUG  - conteiner: ebvp end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: ebvp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: ebpur 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ebpur] DEBUG  - conteiner: ebpur begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ebpur] DEBUG  - service component: nc.impl.ecpubapp.messager.MessagerAware at container: ebpur begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ebpur] DEBUG  - service component: nc.impl.ecpubapp.messager.MessagerAware at container: ebpur end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ebpur] DEBUG  - conteiner: ebpur end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: ebpur 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: dm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.dm] DEBUG  - conteiner: dm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.dm] DEBUG  - conteiner: dm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: dm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: ct 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ct] DEBUG  - conteiner: ct begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ct] DEBUG  - conteiner: ct end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: ct 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: credit 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.credit] DEBUG  - conteiner: credit begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.credit] DEBUG  - conteiner: credit end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: credit 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: cmp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cmp] DEBUG  - conteiner: cmp begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cmp] DEBUG  - conteiner: cmp end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: cmp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: cm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cm] DEBUG  - conteiner: cm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cm] DEBUG  - conteiner: cm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: cm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: cdm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cdm] DEBUG  - conteiner: cdm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cdm] DEBUG  - conteiner: cdm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: cdm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: cc 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cc] DEBUG  - conteiner: cc begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.cc] DEBUG  - conteiner: cc end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: cc 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: bapub 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - conteiner: bapub begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.itf.bi.clusterscheduler.ISchedulerService at container: bapub begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] ERROR  - service component: nc.itf.bi.clusterscheduler.ISchedulerService at container: bapub stop error
+nc.bs.framework.exception.FrameworkSecurityException: invalid secrity token(null)
+	at nc.bs.framework.server.SecurityAspect.aroundMethod1(SecurityAspect.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at nc.bs.framework.aop.rt.AdviceHolder.invoke(AdviceHolder.java:170)
+	at nc.bs.framework.aop.rt.MethodProceedingJoinpoint.proceed(MethodProceedingJoinpoint.java:93)
+	at nc.bs.framework.aop.rt.MethodProceedingJoinpoint.proceed(MethodProceedingJoinpoint.java:99)
+	at nc.bs.framework.aop.rt.AspectedProxy.invoke(AspectedProxy.java:59)
+	at $Proxy22.isStarted(Unknown Source)
+	at nc.bs.framework.core.AbstractGenericContainer.stopActive(AbstractGenericContainer.java:443)
+	at nc.bs.framework.core.AbstractGenericContainer.internalStop(AbstractGenericContainer.java:341)
+	at nc.bs.framework.core.AbstractGenericContainer.stop(AbstractGenericContainer.java:327)
+	at nc.bs.framework.server.BusinessAppServer.beforeInternalStop(BusinessAppServer.java:558)
+	at nc.bs.framework.core.AbstractGenericContainer.stop(AbstractGenericContainer.java:326)
+	at com.yonyou.uat.context.impl.BusinessServerManagerImpl.ShutDownServer(BusinessServerManagerImpl.java:98)
+	at workflowapp.nc.tc.util.BaseTestCase.baseTearDown(BaseTestCase.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:551)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:308)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.launching.LongCommandLineLauncher.main(LongCommandLineLauncher.java:43)
+ 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.itf.bi.clusterscheduler.ISchedulerMasterService at container: bapub begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.itf.bi.clusterscheduler.ISchedulerMasterService at container: bapub end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.bs.pub.bi.perfwatch.PerfBSStore at container: bapub begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.bs.pub.bi.perfwatch.PerfBSStore at container: bapub end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.bs.pub.bi.clusterscheduler.Scheduler at container: bapub begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - service component: nc.bs.pub.bi.clusterscheduler.Scheduler at container: bapub end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bapub] DEBUG  - conteiner: bapub end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: bapub 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: baportal 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.baportal] DEBUG  - conteiner: baportal begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.baportal] DEBUG  - conteiner: baportal end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: baportal 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: bap 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bap] DEBUG  - conteiner: bap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bap] DEBUG  - conteiner: bap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: bap 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: bafi 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bafi] DEBUG  - conteiner: bafi begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.bafi] DEBUG  - conteiner: bafi end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: bafi 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: aum 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.aum] DEBUG  - conteiner: aum begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.aum] DEBUG  - conteiner: aum end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: aum 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: arap 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.arap] DEBUG  - conteiner: arap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.arap] DEBUG  - conteiner: arap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: arap 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: ampub 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ampub] DEBUG  - conteiner: ampub begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.ampub] DEBUG  - conteiner: ampub end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: ampub 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: alm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.alm] DEBUG  - conteiner: alm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.alm] DEBUG  - conteiner: alm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: alm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: aim 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.aim] DEBUG  - conteiner: aim begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.aim] DEBUG  - conteiner: aim end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: aim 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapws 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapws] DEBUG  - conteiner: uapws begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapws] DEBUG  - conteiner: uapws end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapws 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uaptm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uaptm] DEBUG  - conteiner: uaptm begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uaptm] DEBUG  - conteiner: uaptm end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uaptm 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapportal 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapportal] DEBUG  - conteiner: uapportal begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapportal] DEBUG  - conteiner: uapportal end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapportal 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapeai 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapeai] DEBUG  - conteiner: uapeai begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapeai] DEBUG  - conteiner: uapeai end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapeai 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapde 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapde] DEBUG  - conteiner: uapde begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapde] DEBUG  - conteiner: uapde end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapde 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapbdsearch 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapbdsearch] DEBUG  - conteiner: uapbdsearch begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapbdsearch] DEBUG  - conteiner: uapbdsearch end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapbdsearch 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapbd 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapbd] DEBUG  - conteiner: uapbd begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapbd] DEBUG  - conteiner: uapbd end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapbd 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uapadp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapadp] DEBUG  - conteiner: uapadp begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uapadp] DEBUG  - conteiner: uapadp end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uapadp 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - before stop module: uap 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - conteiner: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.cluster.itf.IFileGroupRegistry at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.cluster.itf.IFileGroupRegistry at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: throughputresetservice at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: throughputresetservice at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.pubitf.bdsearch.IBDSearcher at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.pubitf.bdsearch.IBDSearcher at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.jca.IJcaComponent at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.jca.IJcaComponent at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.lock.LockGC at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.lock.LockGC at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.impl.ls.LightTaskRecover at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.impl.ls.LightTaskRecover at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.dbcache.impl.CacheStartUpService at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.dbcache.impl.CacheStartUpService at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.dbcache.impl.VOCacheChangeListener at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.dbcache.impl.VOCacheChangeListener at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.cluster.impl.FileGroupSyncListener at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.cluster.impl.FileGroupSyncListener at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.component.LogManageComponent at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.component.LogManageComponent at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.server.ReleaseTokenListenerImpl at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.server.ReleaseTokenListenerImpl at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: PFClusterListener at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: PFClusterListener at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: PALiveListener at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: PALiveListener at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: SchedulerService at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [scheduleengine] WARN  - SchedulerService Exception
+java.lang.IllegalMonitorStateException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.signal(Unknown Source)
+	at nc.bs.uap.scheduler.queue.mem.MemTaskQueueImpl.add(MemTaskQueueImpl.java:38)
+	at nc.bs.uap.scheduler.impl.GuardedService.afterRequestStop(GuardedService.java:107)
+	at nc.bs.uap.scheduler.impl.GuardedService.stopService(GuardedService.java:68)
+	at nc.bs.uap.scheduler.impl.SchedulerService.stop(SchedulerService.java:111)
+	at nc.bs.framework.core.AbstractGenericContainer.stopActive(AbstractGenericContainer.java:444)
+	at nc.bs.framework.core.AbstractGenericContainer.internalStop(AbstractGenericContainer.java:341)
+	at nc.bs.framework.core.AbstractGenericContainer.stop(AbstractGenericContainer.java:327)
+	at nc.bs.framework.server.BusinessAppServer.beforeInternalStop(BusinessAppServer.java:558)
+	at nc.bs.framework.core.AbstractGenericContainer.stop(AbstractGenericContainer.java:326)
+	at com.yonyou.uat.context.impl.BusinessServerManagerImpl.ShutDownServer(BusinessServerManagerImpl.java:98)
+	at workflowapp.nc.tc.util.BaseTestCase.baseTearDown(BaseTestCase.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:551)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:308)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.jdt.internal.launching.LongCommandLineLauncher.main(LongCommandLineLauncher.java:43)
+ 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: SchedulerService at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.common.ITimeService at container: uap begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - service component: nc.bs.framework.common.ITimeService at container: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.Module.uap] DEBUG  - conteiner: uap end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - after stop module: uap 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.core.common.IConfigMetaService at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.core.common.IConfigMetaService at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.server.LiveServerManager at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.live] DEBUG  - LiveServerManager begin stop.... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.live] DEBUG  - LiveServerManager end stop.... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.server.LiveServerManager at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.provision.server.IProvisionService at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.provision.server.IProvisionService at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.cluster.itf.ClusterReceiver at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.cluster.itf.ClusterReceiver at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: onlineTopic at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: onlineTopic at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.cluster.impl.OfflineBoard at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.cluster.impl.OfflineBoard at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.cluster.itf.ClusterBrokerRegistry at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.cluster.itf.ClusterBrokerRegistry at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.core.service.TimeService at container: BizAppServer begin stop... 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - service component: nc.bs.framework.core.service.TimeService at container: BizAppServer end stop 
+[main] 2012/11/13 10:25:47 [nc.bs.framework.server.BusinessAppServer.BizAppServer] DEBUG  - conteiner: BizAppServer end stop 

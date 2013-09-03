@@ -1,0 +1,37 @@
+<div id="approve" class="modal hide fade" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal">&times;</a>
+    审批
+  </div>
+  <div class="modal-body">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#tab1" data-toggle="tab">审批意见</a>
+      </li>
+      <li>
+        <a href="#assign-tab" data-toggle="tab">指派</a>
+      </li>
+      <li>
+        <a href="#cctab" data-toggle="tab">抄送</a>
+      </li>
+      <li>
+        <a href="#tab3" data-toggle="tab">附件</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="approve-container">
+      <div class="tab-pane active" id="tab1">
+        <textarea id="approve-comment"  rows="6" class="span12" placeholder="备注"> <%= approveModel.get('comment') %></textarea>
+        <label class="checkbox" for="track">
+          <input type="checkbox" <% if(approveModel.get('track')) {%><%='checked ' %><%} %> id="approve-track">跟踪</label>
+      </div>
+      <div class="tab-pane"  id="cctab">
+      </div>
+      <div class="tab-pane"  id="assign-tab">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary" id="approve-ok">批准</a>
+    <a href="#" class="btn" id="approve-cancel">不批准</a>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <action-mappings >
+    <action path="/getAllServices.ajax" type="nc.uap.ws.console.action.GetServicesAction" />
+  	<action path="/login.ajax" type="nc.uap.ws.console.action.LoginAction" />
+  	
+  	<action path="/getBasicInfo.ajax" type="nc.uap.ws.console.action.GetBasicInfoAction" />
+  	<action path="/getWssInfo.ajax" type="nc.uap.ws.console.action.GetWssInfoAction" />
+  	<action path="/getKSInfo.ajax" type="nc.uap.ws.console.action.GetKSInfoAction" />
+  	
+  	<action path="/saveDoc.ajax" type="nc.uap.ws.console.action.SaveDocAction" />
+  	<action path="/loadDoc.ajax" type="nc.uap.ws.console.action.LoadDocAction" />
+  	
+  	<action path="/loadReqTemplete.ajax" type="nc.uap.ws.console.action.GenSoapRequestAction" />
+  	<action path="/soapRequest.ajax" type="nc.uap.ws.console.action.SoapRequestAction" />
+  	<action path="/soapFormat.ajax" type="nc.uap.ws.console.action.SoapFormatAction" />
+  </action-mappings>
+  <login name = "administrator" password="111111"/>
+</config>

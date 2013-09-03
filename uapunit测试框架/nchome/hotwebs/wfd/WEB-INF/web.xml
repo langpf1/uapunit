@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp">  
+
+	<!-- WS Console Servlet-->
+
+	<!-- END WS Console Servlet-->
+
+	<!-- WS Console Servlet Maping-->
+	
+	 <!-- 针对于审批界面的action的servlet -->
+    <servlet>
+		<servlet-name>Runtime</servlet-name>
+		<servlet-class>
+			org.restlet.ext.servlet.ServerServlet
+		</servlet-class>
+		<init-param>  
+            <param-name>org.restlet.application</param-name>  
+            <param-value>uap.workflow.restlet.application.RuntimeApplication</param-value>  
+        </init-param>  
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Runtime</servlet-name>
+		<url-pattern>/runtime/*</url-pattern>
+	</servlet-mapping>
+	<!-- /////////////////////////// -->  
+	<servlet>
+		<servlet-name>wf</servlet-name>
+		<servlet-class>
+			uap.workflow.servlet.ControllerServlet
+		</servlet-class>
+	</servlet>
+	<!--END WS Console Servlet Maping-->
+	<servlet-mapping>
+		<servlet-name>wf</servlet-name>
+		<url-pattern>/wf/*</url-pattern>
+	</servlet-mapping>
+    <!--@EJBREF@-->
+</web-app>

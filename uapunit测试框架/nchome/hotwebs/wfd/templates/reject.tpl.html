@@ -1,0 +1,39 @@
+<div id="reject" class="modal hide fade"  role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal">&times;</a>
+    驳回
+  </div>
+  <div class="modal-body">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#tab1" data-toggle="tab">驳回</a>
+      </li>
+      <li>
+        <a href="#cctab" data-toggle="tab">抄送</a>
+      </li>
+      <li>
+        <a href="#tab3" data-toggle="tab">附件</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="reject-container">
+      <div class="tab-pane active" id="tab1">
+        <label>环节选择：</label>
+          <select id='reject-node-selected'>
+            <% _.each(rejectNodes,function(node){%>
+            <option value= <%= node.RejectID %>> <%= node.RejectName %> </option>
+            <% });%>
+          </select>
+          <br>
+        <textarea id="reject-comment"  rows="6" class="span12" placeholder="备注"> <%= rejectModel.get('comment') %></textarea>
+        <label class="checkbox" for="track">
+          <input type="checkbox" <% if(rejectModel.get('track')) {%><%='checked ' %><%} %> id="reject-track">跟踪</label>
+      </div>
+      <div class="tab-pane"  id="cctab">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary" id="reject-ok">确定</a>
+    <a href="#" class="btn" id="reject-cancel">取消</a>
+  </div>
+</div>

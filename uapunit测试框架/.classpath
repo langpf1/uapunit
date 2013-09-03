@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<classpath> 
+  <classpathentry kind="src" path="modeler/src/public" output="out/modeler"/>
+  <classpathentry kind="src" path="modeler/src/private" output="out/modeler"/>
+  <classpathentry kind="src" path="modeler/src/client" output="out/modeler"/>
+  <classpathentry kind="src" path="modeler/src/resources" output="out/modeler"/>
+  <classpathentry kind="src" path="modeler/src/test" output="out/modeler"/>
+  <classpathentry kind="src" path="engine/src/public" output="out/engine"/>
+  <classpathentry kind="src" path="engine/src/private" output="out/engine"/>
+  <classpathentry kind="src" path="engine/src/resources" output="out/engine"/>
+  <classpathentry kind="src" path="engine/src/test" output="out/engine"/>
+  <classpathentry including="test" kind="src" path="wfdesigner/src" output="out/wfdesigner"/>
+  <classpathentry kind="src" path="wfdesigner/src/test" output="out/wfdesigner"/>
+  <classpathentry kind="src" path="NCImpl/NCParticipantImpl/src/private" output="out/NCImpl/NCParticipantImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCParticipantImpl/src/public" output="out/NCImpl/NCParticipantImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCParticipantImpl/src/client" output="out/NCImpl/NCParticipantImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCParticipantImpl/src/test" output="out/NCImpl/NCParticipantImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCWorklist/src/public" output="out/NCImpl/NCWorklist"/>
+  <classpathentry kind="src" path="NCImpl/NCWorklist/src/private" output="out/NCImpl/NCWorklist"/>
+  <classpathentry kind="src" path="NCImpl/NCWorklist/src/client" output="out/NCImpl/NCWorklist"/>
+  <classpathentry kind="src" path="NCImpl/NCWorklist/src/test" output="out/NCImpl/NCWorklist"/>
+  <classpathentry kind="src" path="NCImpl/NCAppAdapter/src/public" output="out/NCImpl/NCAppAdapter"/>
+  <classpathentry kind="src" path="NCImpl/NCAppAdapter/src/client" output="out/NCImpl/NCAppAdapter"/>
+  <classpathentry kind="src" path="NCImpl/NCAppAdapter/src/test" output="out/NCImpl/NCAppAdapter"/>
+  <classpathentry kind="src" path="WorkflowApp/src/public" output="out/WorkflowApp"/>
+  <classpathentry kind="src" path="WorkflowApp/src/private" output="out/WorkflowApp"/>
+  <classpathentry kind="src" path="WorkflowApp/src/client" output="out/WorkflowApp"/>
+  <classpathentry kind="src" path="WorkflowApp/src/test" output="out/WorkflowApp"/>
+  <classpathentry kind="src" path="NCImpl/NCBizImpl/src/public" output="out/NCImpl/NCBizImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCBizImpl/src/private" output="out/NCImpl/NCBizImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCBizImpl/src/client" output="out/NCImpl/NCBizImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCBizImpl/src/resources" output="out/NCImpl/NCBizImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCBizImpl/src/wftest" output="out/NCImpl/NCBizImpl"/>
+  <classpathentry kind="src" path="NCImpl/NCBizImpl/src/test" output="out/NCImpl/NCBizImpl"/>
+  <classpathentry kind="src" path="bpmn/src/private" output="out/bpmn"/>
+  <classpathentry kind="src" path="bpmn/src/public" output="out/bpmn"/>
+  <classpathentry kind="src" path="bpmn/src/test" output="out/bpmn"/>
+  <classpathentry kind="lib" path="engine/lib/commons-email-1.2.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/drools-api-5.1.1.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/drools-compiler-5.1.1.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/drools-core-5.1.1.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/geronimo-jpa_3.0_spec-1.0.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/java-uuid-generator-3.1.3.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/junit-4.8.1.jar"/>  
+  <classpathentry kind="lib" path="engine/lib/mybatis-3.0.4.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/jackson-annotations-2.1.1.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/jackson-core-2.1.1.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/jackson-databind-2.1.1.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/gson-1.4.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/org.restlet.ext.json.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/org.restlet.ext.servlet.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/org.restlet.jar"/>  
+  <classpathentry kind="lib" path="wfdesigner/lib/org.restlet.json.jar"/>  
+  <classpathentry kind="src" output="out/resources" path="resources"/>  
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Ant_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Product_Common_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Middleware_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Framework_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Module_Public_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Module_Client_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Module_Private_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Module_Lang_Library"/>  
+  <classpathentry kind="con" path="nc.uap.mde.library.container/Generated_EJB"/>  
+  <classpathentry kind="output" path="bin"/> 
+</classpath>

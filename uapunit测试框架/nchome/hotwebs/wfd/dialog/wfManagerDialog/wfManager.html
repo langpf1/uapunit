@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>流程管理中心</title>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css">
+	<link rel="stylesheet" type="text/css" href="../../css/refcss/wfex.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../../js/libs/easyui/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="../../js/libs/easyui/jquery.easyui.min.js"></script>
+	 <script type="text/javascript">
+		var RESOURCES_PATH = '../../resources';
+		var RESOURCE_BASE = RESOURCES_PATH + '/dialog';
+		var urlParams = (function(url)
+		{	
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+	
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+				
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+					
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+			
+			return result;
+		})(window.location.href);
+		// Sets the base path, the UI language via URL param and configures the
+		// supported languages to avoid 404s. The loading of all core language
+		// resources is disabled as all required resources are in grapheditor.
+		// properties. Note that in this example the loading of two resource
+		// files (the special bundle and the default bundle) is disabled to
+		// save a GET request. This requires that all resources be present in
+		// each properties file since only one file is loaded.
+		mxLoadResources = true
+		mxBasePath = '../../js';
+		mxLanguage = urlParams['lang'];
+		mxLanguages = ['de','zh-cn'];
+    </script>
+	<script type="text/javascript" src="../../js/mxgraph/mxClient.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxEvent.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxXmlRequest.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxUtils.js"></script>
+	<script type="text/javascript">
+	 function LocalResources(){}
+       mxResources.loadDefaultBundle = false;
+ 	   mxResources.add(RESOURCE_BASE); 
+ 	   LocalResources.OK=mxResources.get("ok");      
+	   LocalResources.CANCEL=mxResources.get("cancel");
+	   LocalResources.Filter=mxResources.get('filter');
+	   LocalResources.TITLE=mxResources.get("流程实例");
+	   LocalResources.dataLoading=mxResources.get('data loading');
+	   LocalResources.number=mxResources.get('number');
+	   LocalResources.page=mxResources.get('page');
+	   LocalResources.total=mxResources.get('total');
+	   LocalResources.current=mxResources.get('current');
+	   LocalResources.items=mxResources.get('items');
+	   LocalResources.total=mxResources.get('total');
+	   LocalResources.Code=mxResources.get('Code');
+	   LocalResources.Name=mxResources.get('Name');
+	   
+      var pageNumber=null,pageSize=null;
+		function inition(){
+		    var searcha = $('#msearch').menubutton({ menu: '#search'}); 
+		    $(searcha.menubutton('options').menu).menu({
+		    	onClick:function(item){ searchs(item);}
+		    });
+		     var tool = $('#mtool').menubutton({ menu: '#tool' }); 
+		      $(tool.menubutton('options').menu).menu({
+		    	onClick:function(item){
+		    	alert(item.id);
+		    	}
+		    });
+		    initionWfInsTableCol(item);
+
+		}
+		function initionWfInsTableCol(item){
+			 $('#dg').datagrid({
+           	 columns:[[
+            	 {field:'pk_starter',title:'提交人',width:'140',align:'center'},
+            	 {field:'startdate',title:'开始时间',width:'140',align:'center'},
+            	 {field:'enddate',title:'结束时间',width:'140',align:'center'},
+            	 {field:'expiry',title:'逾期',width:'140',align:'center'},
+            	 {field:'billtype',title:'单据类型',width:'80',align:'center'},
+            	 {field:'pk_form_ins',title:'单据编号',width:'140',align:'center'},
+             	 {field:'pk_org',title:'组织',width:'100',align:'center'},
+            	 {field:'pk_proins',title:'流程实例编号',width:'140',align:'center'},
+            	 {field:'state_proins',title:'流程实例状态',80:'auto',align:'center'},
+            	 {field:'result',title:'流程实例结果',width:'80',align:'center'}
+             	 ]]
+            });
+            initionTable()			
+			var p = $('#dg').datagrid('getPager');
+			$(p).pagination({
+				onRefresh:function(pageNumber,pageSize){
+				},
+				onChangePageSize:function(){
+				},
+				onSelectPage:function(pageNumber,pageSize){
+				pageNumber =pageNumber;
+				pageSize = pageSize;
+				  var urlString='/wfd/wf?action=querywf&item='+item.id+'&';
+				   //var filterValue = $('#filterText').searchbox('getValue');
+				   urlString=urlString+'pageNumber='+pageNumber+'&pageSize='+pageSize;
+	               //urlString=urlString+'&filterValue='+filterValue;
+	               debugger;
+				   loaddata(urlString);
+				}
+			});
+		}
+		function initionTable(){
+			$('#dg').datagrid({
+				title:LocalResources.TITLE,
+				iconCls:'icon-save',
+				width:'auto',
+				height:600,
+				loading:LocalResources.dataLoading+'......',
+				nowrap: true,
+				autoRowHeight: false,
+				striped: true,
+				collapsible:false,//是否可以折叠
+				fit:false,//自动大小
+				singleSelect:true,//是否单选
+				remoteSort: false,
+				idField:'code',
+				pagination:true,//分页控件
+				rownumbers:true	
+			});
+			var p = $('#dg').datagrid('getPager');
+			$(p).pagination({
+			    pageSize:30,//每页显示的记录的条数
+				pageList:[15,30,45],//设置每页记录条数的列表
+				beforePageText:LocalResources.number,
+				afterPageText:LocalResources.page+LocalResources.total+'{pages}'+LocalResources.page,
+				displayMsg:LocalResources.current+'{from}-{to}'+LocalResources.items+' '+LocalResources.total+'{total}'+LocalResources.items
+				});
+		}
+		function initionWorkitemTableCol(item){
+			 $('#dg').datagrid({
+           	 columns:[[
+            	 {field:'pk_creater',title:'发送人',width:'140',align:'center'},
+            	 {field:'startdate',title:'开始时间',width:'140',align:'center'},
+            	 {field:'enddate',title:'结束时间',width:'140',align:'center'},
+            	 {field:'expiry',title:'逾期',width:'140',align:'center'},
+            	 {field:'billtype',title:'单据类型',width:'80',align:'center'},
+            	 {field:'pk_form_ins',title:'单据编号',width:'140',align:'center'},
+             	 {field:'pk_org',title:'组织',width:'100',align:'center'},
+            	 {field:'pk_executer',title:'处理人',width:'140',align:'center'},
+            	 {field:'opinion',title:'处理意见',80:'auto',align:'center'},
+            	 {field:'scratch',title:'批语',width:'80',align:'center'},
+            	 {field:'state',title:'处理状况',width:'80',align:'center'}
+             	 ]]
+            });
+            initionTable();		
+			var p = $('#dg').datagrid('getPager');
+			$(p).pagination({
+			onRefresh:function(pageNumber,pageSize){
+				},
+				onChangePageSize:function(){
+				},
+				onSelectPage:function(pageNumber,pageSize){
+				pageNumber =pageNumber;
+				pageSize = pageSize;
+				  var urlString='/wfd/wf?action=querywf&item='+item.id+'&';
+				   //var filterValue = $('#filterText').searchbox('getValue');
+				   urlString=urlString+'pageNumber='+pageNumber+'&pageSize='+pageSize;
+	               //urlString=urlString+'&filterValue='+filterValue;
+	               debugger;
+				   loaddata(urlString);
+				}
+			});
+		}
+		function onCancel(){
+			window.close(); 
+		}
+		function onOK(){
+		   var row = $('#dg').datagrid('getSelected');
+           window.returnValue=row;
+           window.close(); 
+		}
+		function loaddata(urlString){  
+			mxUtils.post(urlString, '', mxUtils.bind(this, function(req){
+							if(req.getStatus() != 404){   
+								var respText = req.request.responseText;
+								var json = eval("("+respText+")");
+								$('#dg').datagrid('loadData',json);
+							}
+						}));
+		}
+		function searchs(item){//根据选择，查找数据
+			var urlString='/wfd/wf?action=querywf&item='+item.id+'&';
+			urlString=urlString+'pageNumber='+pageNumber+'&pageSize='+pageSize;
+			if(item.id=="wfins"){
+				var returnValue = showModalDialog("../wfManagerDialog/queryWfCondition.html", null, 'dialogHeight:500px;dialogWidth:800px;center:yes');
+				urlString=urlString+returnValue;
+			    initionWfInsTableCol(item);
+			}
+			if(item.id=="workitem"){
+				var returnValue = showModalDialog("../wfManagerDialog/queryWfCondition.html", null, 'dialogHeight:500px;dialogWidth:800px;center:yes');
+				urlString=urlString+returnValue;
+			    initionWorkitemTableCol(item);
+			}
+		loaddata(urlString);
+	}
+	</script>
+</head>
+<body class="easyui-layout" onLoad="inition()">
+	<div data-options="region:'north'" title="   " style="padding:5px;height:50px">
+	      <a href="javascript:void(0)" id="msearch" style="color:#0094ff" iconCls="icon-lighting">查询</a> 
+	      	<div id="search" style="width:150px;"> 
+			<div id="wfins">流程实例</div> 
+			<div id="workitem">工作项</div> 
+			</div> 
+	       <a class="easyui-linkbutton" href="javascript:void(0)" onclick="onOK()" style="region:'center';color:#0094ff">单据</a>
+   		 <a class="easyui-linkbutton" href="javascript:void(0)" onclick="onCancel()" style="region:'center';color:#0094ff">流程</a>
+   		 <a href="javascript:void(0)" id="mtool" iconCls="icon-edit" style="color:#0094ff">工具</a> 
+	      	<div id="tool" style="width:150px;"> 
+			<div id="suspended">挂起</div> 
+			<div id="recovery">恢复</div>  
+			<div id="terminal">终止</div> 
+			<div id="history">操作历史</div> 
+			<div class="menu-sep"></div> 
+			<div id="deadline">时限</div> 
+			</div>
+ 		</div> 
+	<div data-options="region:'center'" border=0 style="auto">
+	<table id="dg" class="easyui-datagrid"> 
+	</table> 
+	<table id="dg" class="easyui-datagrid"> 
+	</table> 
+</body>
+</html>

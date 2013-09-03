@@ -1,0 +1,22 @@
+
+<div>
+  <a href="#" id="assign-add-user" data-type="select2" data-pk="1" data-original-title="选择用户">添加用户：</a>
+  <div style="width:16em" class="tag-list" id="assign-user-tag">
+    <div class="tags"></div>
+  </div>
+  <br>
+  <textarea id="assign-comment"  rows="6" class="span12" placeholder="备注">
+    <%= assignModel.get('comment') %></textarea>
+</div>
+<div>
+  <form class="form-inline">
+    <label class="checkbox" for="assign-parallel">
+      <input type="checkbox" <% if(assignModel.get('parallel')) {%>
+      <%='checked' %>
+      <%} %>id="assign-parallel">并行</label>
+    <label class="checkbox" for="assign-track">
+      <input type="checkbox"  <% if(assignModel.get('track')) {%>
+      <%='checked' %>
+      <%} %>id="assign-track">跟踪</label>
+  </form>
+</div>

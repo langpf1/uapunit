@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+	<html> 
+	<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>Script</title>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css">
+	<link rel="stylesheet" type="text/css" href="../../css/refcss/wfex.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../../js/libs/easyui/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="../../js/libs/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript">
+		var RESOURCES_PATH = '../../resources';
+		var RESOURCE_BASE = RESOURCES_PATH + '/dialog';
+		var urlParams = (function(url)
+		{	
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+	
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+				
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+					
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+			
+			return result;
+		})(window.location.href);
+		// Sets the base path, the UI language via URL param and configures the
+		// supported languages to avoid 404s. The loading of all core language
+		// resources is disabled as all required resources are in grapheditor.
+		// properties. Note that in this example the loading of two resource
+		// files (the special bundle and the default bundle) is disabled to
+		// save a GET request. This requires that all resources be present in
+		// each properties file since only one file is loaded.
+		mxLoadResources = true
+		mxBasePath = '../../js';
+		mxLanguage = urlParams['lang'];
+		mxLanguages = ['de','zh-cn'];
+    </script>
+	<script type="text/javascript" src="../../js/mxgraph/mxClient.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxEvent.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxXmlRequest.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxUtils.js"></script>
+	<script type="text/javascript" src="../../js/model.js"></script>
+	</head> 
+	<body class="easyui-layout" onload= "initialize();"> 
+	<div data-options="region:'center'" >
+	<textarea name="content" cols="36" rows="16" id="content" style="border:0 solid #888888;overflow: auto;LINE-HEIGHT:18px;padding: 3px;"></textarea>
+	 </div>
+	<div data-options="region:'south',split:true" title="" style="height:40px;padding:0px;background:#efefef">
+   <center>
+   <a class="easyui-linkbutton" href="javascript:void(0)" id='ok' onclick="onOK()" style="region:'center'">&nbspOK&nbsp&nbsp</a>
+   <a class="easyui-linkbutton" href="javascript:void(0)" id='cancel' onclick="onCancel()" style="region:'center'">Cancel</a>
+ </center>
+ </div>   
+	<script type="text/javascript"> 
+	function LocalResources(){}
+	   mxResources.loadDefaultBundle = false;
+ 	   mxResources.add(RESOURCE_BASE); 
+ 	   LocalResources.OK=mxResources.get("ok");      
+	   LocalResources.CANCEL=mxResources.get("cancel");
+	   LocalResources.TITLE=mxResources.get("Script Config");  
+	function onOK(){ 
+	    var ducumention = document.getElementById("content").innerText;
+        window.returnValue=ducumention;
+        window.close();
+    }
+	function onCancel(){
+		window.returnValue = undefined;
+		document.getElementById('content').value = "";
+		window.close(); 
+	}
+	function initialize(){
+	    document.title =  LocalResources.TITLE;
+	    document.getElementById('ok').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+ LocalResources.OK+"</SPAN></SPAN>";
+	    document.getElementById('cancel').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+ LocalResources.CANCEL+"</SPAN></SPAN>";
+		if (window.dialogArguments){
+		document.getElementById('content').value = window.dialogArguments;
+	}
+	window.onunload=function(){
+		if(!window.returnValue)
+			window.returnValue = undefined;	
+	}
+	} 
+	</script> 
+	</body> 
+	</html>

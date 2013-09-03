@@ -1,0 +1,244 @@
+[13 05 30 13:07:29,174 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 30 13:07:29,190 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 30 13:07:29,190 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 30 13:07:29,190 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 30 13:07:29,377 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-30 13:07:29
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 30 13:07:29,409 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 13:07:29,424 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 30 13:07:29,456 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\WorkflowComplexTest.xls
+[13 05 30 13:07:29,846 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 30 13:07:29,846 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 30 13:07:29,846 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 30 13:07:29,846 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-30 13:07:29
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 30 13:07:29,862 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\WorkflowComplexTest.xls
+[13 05 30 16:46:01,095 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
+[13 05 30 16:46:01,141 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
+[13 05 30 16:46:01,563 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 30 16:46:01,579 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 30 16:46:01,579 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 30 16:46:01,579 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 30 16:46:01,891 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-30 16:46:01
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 30 16:46:01,907 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:46:01,922 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 30 16:46:02,391 DEBUG] [main] org.springframework.core.io.support.PathMatchingResourcePatternResolver - Found Equinox FileLocator for OSGi bundle URL resolution
+[13 05 30 16:46:02,422 INFO ] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@3cc262: startup date [Thu May 30 16:46:02 CST 2013]; root of context hierarchy
+[13 05 30 16:46:02,578 INFO ] [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [D:\uattest\workflow\bin\resources\configure\uat_spring_conf.xml]
+[13 05 30 16:46:02,594 DEBUG] [main] org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [org.apache.xerces.jaxp.DocumentBuilderFactoryImpl]
+[13 05 30 16:46:02,797 DEBUG] [main] org.springframework.beans.factory.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/config/spring.schemas]
+[13 05 30 16:46:02,812 DEBUG] [main] org.springframework.beans.factory.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd}
+[13 05 30 16:46:02,812 DEBUG] [main] org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-2.5.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-2.5.xsd
+[13 05 30 16:46:02,859 DEBUG] [main] org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+[13 05 30 16:46:02,891 DEBUG] [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [D:/uattest/workflow/bin/resources/configure/uat_spring_conf.xml]
+[13 05 30 16:46:02,891 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Bean factory for org.springframework.context.support.FileSystemXmlApplicationContext@3cc262: org.springframework.beans.factory.support.DefaultListableBeanFactory@502819: defining beans [propertyConfigurer,springConstruct,objectFileConstruct,dataTableConstruct,dataBackupManager,businessapp]; root of factory hierarchy
+[13 05 30 16:46:02,953 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertyConfigurer'
+[13 05 30 16:46:02,953 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'propertyConfigurer'
+[13 05 30 16:46:03,000 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
+[13 05 30 16:46:03,031 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'propertyConfigurer'
+[13 05 30 16:46:03,031 INFO ] [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [resources/configure/uat.properties]
+[13 05 30 16:46:03,031 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@15d4de6]
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@18bd7f1]
+[13 05 30 16:46:03,047 INFO ] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@502819: defining beans [propertyConfigurer,springConstruct,objectFileConstruct,dataTableConstruct,dataBackupManager,businessapp]; root of factory hierarchy
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'propertyConfigurer'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'springConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'springConstruct' to allow for resolving potential circular references
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'springConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'objectFileConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'objectFileConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'objectFileConstruct' to allow for resolving potential circular references
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'objectFileConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataTableConstruct'
+[13 05 30 16:46:03,047 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'dataTableConstruct'
+[13 05 30 16:46:03,062 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'dataTableConstruct' to allow for resolving potential circular references
+[13 05 30 16:46:03,062 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'dataTableConstruct'
+[13 05 30 16:46:03,062 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataBackupManager'
+[13 05 30 16:46:03,062 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'dataBackupManager'
+[13 05 30 16:46:03,094 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'dataBackupManager' to allow for resolving potential circular references
+[13 05 30 16:46:03,109 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'dataBackupManager'
+[13 05 30 16:46:03,109 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'businessapp'
+[13 05 30 16:46:03,109 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'businessapp'
+[13 05 30 16:46:03,453 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'businessapp' to allow for resolving potential circular references
+[13 05 30 16:46:03,453 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'businessapp'
+[13 05 30 16:46:03,468 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@c00025]
+[13 05 30 16:46:03,468 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+[13 05 30 16:46:03,468 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'businessapp'
+[13 05 30 16:49:48,810 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
+[13 05 30 16:49:48,810 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
+[13 05 30 16:49:49,170 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 30 16:49:49,185 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 30 16:49:49,185 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 30 16:49:49,185 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-30 16:49:49
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:49:49,435 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 30 16:49:49,607 DEBUG] [main] org.springframework.core.io.support.PathMatchingResourcePatternResolver - Found Equinox FileLocator for OSGi bundle URL resolution
+[13 05 30 16:49:49,607 INFO ] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@3c2378: startup date [Thu May 30 16:49:49 CST 2013]; root of context hierarchy
+[13 05 30 16:49:49,747 INFO ] [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from file [D:\uattest\workflow\bin\resources\configure\uat_spring_conf.xml]
+[13 05 30 16:49:49,763 DEBUG] [main] org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [org.apache.xerces.jaxp.DocumentBuilderFactoryImpl]
+[13 05 30 16:49:49,966 DEBUG] [main] org.springframework.beans.factory.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/config/spring.schemas]
+[13 05 30 16:49:49,966 DEBUG] [main] org.springframework.beans.factory.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd}
+[13 05 30 16:49:49,982 DEBUG] [main] org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-2.5.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-2.5.xsd
+[13 05 30 16:49:50,044 DEBUG] [main] org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+[13 05 30 16:49:50,075 DEBUG] [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 6 bean definitions from location pattern [D:/uattest/workflow/bin/resources/configure/uat_spring_conf.xml]
+[13 05 30 16:49:50,075 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Bean factory for org.springframework.context.support.FileSystemXmlApplicationContext@3c2378: org.springframework.beans.factory.support.DefaultListableBeanFactory@502819: defining beans [propertyConfigurer,springConstruct,objectFileConstruct,dataTableConstruct,dataBackupManager,businessapp]; root of factory hierarchy
+[13 05 30 16:49:50,138 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertyConfigurer'
+[13 05 30 16:49:50,138 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'propertyConfigurer'
+[13 05 30 16:49:50,169 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'propertyConfigurer' to allow for resolving potential circular references
+[13 05 30 16:49:50,216 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'propertyConfigurer'
+[13 05 30 16:49:50,216 INFO ] [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [resources/configure/uat.properties]
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@15d4de6]
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@18bd7f1]
+[13 05 30 16:49:50,232 INFO ] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@502819: defining beans [propertyConfigurer,springConstruct,objectFileConstruct,dataTableConstruct,dataBackupManager,businessapp]; root of factory hierarchy
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'propertyConfigurer'
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springConstruct'
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'springConstruct'
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'springConstruct' to allow for resolving potential circular references
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'springConstruct'
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'objectFileConstruct'
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'objectFileConstruct'
+[13 05 30 16:49:50,232 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'objectFileConstruct' to allow for resolving potential circular references
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'objectFileConstruct'
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataTableConstruct'
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'dataTableConstruct'
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'dataTableConstruct' to allow for resolving potential circular references
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'dataTableConstruct'
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataBackupManager'
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'dataBackupManager'
+[13 05 30 16:49:50,247 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'dataBackupManager' to allow for resolving potential circular references
+[13 05 30 16:49:50,263 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'dataBackupManager'
+[13 05 30 16:49:50,263 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'businessapp'
+[13 05 30 16:49:50,263 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'businessapp'
+[13 05 30 16:49:50,325 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'businessapp' to allow for resolving potential circular references
+[13 05 30 16:49:50,325 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'businessapp'
+[13 05 30 16:49:50,325 DEBUG] [main] org.springframework.context.support.FileSystemXmlApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@149a794]
+[13 05 30 16:49:50,325 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+[13 05 30 16:49:50,325 DEBUG] [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'businessapp'
+[13 05 30 16:50:58,713 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
+[13 05 30 16:50:58,713 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
+[13 05 30 16:50:58,807 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 30 16:50:58,807 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 30 16:50:58,807 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 30 16:50:58,807 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-30 16:50:59
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:50:59,026 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 30 16:50:59,088 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:50:59,354 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:50:59,479 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:50:59,604 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:50:59,744 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:50:59,885 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:00,775 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:01,009 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:01,165 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:01,306 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:01,431 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:01,587 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:01,728 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:02,259 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 30 16:51:02,259 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 30 16:51:02,259 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 30 16:51:02,259 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-30 16:51:02
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 30 16:51:02,274 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:02,430 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:02,571 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:02,711 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:14,221 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:14,378 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:14,987 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:15,268 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:15,408 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:15,549 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:15,689 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:15,830 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls
+[13 05 30 16:51:15,986 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFEngineServiceTest.xls

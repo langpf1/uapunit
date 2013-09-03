@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>U9 NExt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" id="main-theme-script">
+        <link href="css/themes/default.css" rel="stylesheet" id="theme-specific-script">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Full Calender -->
+        <link href="css/fullcalendar.css" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap Date Picker -->
+        <!-- <link href="scripts/datepicker/css/datepicker.css" rel="stylesheet"> -->
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <!-- <link rel="stylesheet" href="scripts/blueimp-jQuery-File-Upload/css/jquery.fileupload-ui.css"> -->
+        <!-- Bootstrap Image Gallery styles -->
+        <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+        <!-- Uniform -->
+        <!-- <link rel="stylesheet" type="text/css" media="screen,projection" href="scripts/uniform/css/uniform.default.css" /> -->
+        <!-- Chosen multiselect -->
+        <!--link type="text/css" href="scripts/chosen/chosen/chosen.intenso.css" rel="stylesheet" /-->
+        <!-- u9next -->
+        <link href="css/u9next.css" rel="stylesheet">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="../../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="img/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
+    </head>
+    <body>
+        <!-- Top navigation bar -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span>
+                        <span class="icon-bar"></span><span class="icon-bar"></span>
+                    </a>
+                    <div class="logoctn">
+                        <a class="brand" href="index.html">
+                            <img class="logo" src="img/logo.jpg">&nbsp;WorkfloW</a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <a class="btn dropdown-toggle"  data-toggle="dropdown" href="#">  <i id="user-name"></i> <i class="icon-user">
+                        </i> <span class="label label-info">100</span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">                            
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a class="cookie-delete" href="#">Delete Cookies</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" id="logout">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="dropdown" id="messages"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                全部模块 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                      <a href="#">财务</a>
+                                      <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                          <a href="#">总账</a>
+                                          <ul class="dropdown-menu">
+                                            <li><a href="#">基础设置</a></li>
+                                            <li><a href="#">期初</a></li>
+                                            <li><a href="#">凭证模板</a></li>
+                                            <li><a href="#">凭证</a></li>
+                                            <li><a href="#">科目核销</a></li>
+                                          </ul>
+                                        </li>
+                                        <li><a href="#">应收管理</a></li>
+                                        <li><a href="#">税务发票</a></li>
+                                        <li><a href="#">固定资产</a></li>
+                                        <li><a href="#">现金流监控</a></li>
+                                      </ul>
+                                    </li>
+                                    <li><a href="tasklist.html">任务中心</a></li>
+                                    <li><a href="wfmanager.html">流程管理</a></li>
+                                    <li><a href="wfdesigner.html">流程设计</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Older messages...</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" id="settings"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                设置 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Personal Info</a></li>
+                                    <li><a href="#">Preferences</a></li>
+                                    <li><a href="#">Alerts</a></li>
+                                    <li><a class="cookie-delete" href="#">Delete Cookies</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" id="theme"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                主题 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="theme-switch-default" href="#">Default</a></li>
+                                    <li><a class="theme-switch-amelia" href="#">Amelia</a></li>
+                                    <li><a class="theme-switch-cerulean" href="#">Cerulean</a></li>
+                                    <li><a class="theme-switch-journal" href="#">Journal</a></li>
+                                    <li><a class="theme-switch-readable" href="#">Readable</a></li>
+                                    <li><a class="theme-switch-simplex" href="#">Simplex</a></li>
+                                    <li><a class="theme-switch-slate" href="#">Slate</a></li>
+                                    <li><a class="theme-switch-spacelab" href="#">Spacelab</a></li>
+                                    <li><a class="theme-switch-spruce" href="#">Spruce</a></li>
+                                    <li><a class="theme-switch-superhero" href="#">Superhero</a></li>
+                                    <li><a class="theme-switch-united" href="#">United</a></li>
+                                </ul>
+                            </li>
+                            <li id="users"><a href="#">用户管理</a></li>
+                            <li id="apps"><a href="#">联邦应用</a></li>
+                            <li id="help"><a href="#">帮助</a></li>
+                        </ul>
+                        <!--form class="navbar-search pull-right">
+                          <input type="text" class="search-query" placeholder="Search">
+                        </form-->
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Area -->
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span4 column" id="col-task">
+                    <!-- Portlet: task center -->
+                    <div class="box" id="box-center">
+                        <h4 class="box-header round-top">
+                            任务 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <div id="taskconter">
+                                    <div data-toggle="buttons-radio" class="btn-group">
+                                        <button class="btn btn-primary">
+                                            待办 <span class="label label-info red">12</span>
+                                        </button>
+                                        <button class="btn ">
+                                            处理中 <span class="label label-info">33</span>
+                                        </button>
+                                        <button class="btn ">
+                                            已办 <span class="label label-info">123</span>
+                                        </button>
+                                    </div>
+                                    <ul class="dashboard-statistics" id='dashboard-statistics'>
+                                        <li><a href="#"><i class="icon-edit"></i><span class="green">100</span> SO销售订单 </a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-share"></i><span class="red">12</span> 提供轮胎库存量 </a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-check"></i><span class="blue">33</span> 发动机销售数量 </a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-fire"></i><span class="yellow">400</span> 差旅费用报销 </a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-edit"></i><span class="green">100</span> 财务计划协调 </a>
+                                        </li>
+                                        <li><a href="#"><i class="icon-edit"></i><span class="red">12</span> 原料购进2012-07-27
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <div class="span8 column" id="col-carousel">
+                    <!-- Portlet: carousel -->
+                    <div class="box" id="box-carousel">
+                        <h4 class="box-header round-top">
+                            公告 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <div id="myCarousel" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="item">
+                                            <img src="img/gallery/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                                            <div class="carousel-caption">
+                                                <span clas="muted">U9 nExT 行业信息化</span>
+                                                <p>
+                                                    响应时式设计方案，支持各种终端用户（pad、phone、pc）、支持iOS、android</p>
+                                            </div>
+                                        </div>
+                                        <div class="item active">
+                                            <img src="img/gallery/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                                            <div class="carousel-caption">
+                                                <h5>
+                                                    上海哲成携手用友U9打造汽配行业信息化新标杆</h5>
+                                                <p>
+                                                    海哲成汽车装备有限公司（下简称“上海哲成”）与用友软件股份有限公司正式签订U9项目合作协议。</p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/gallery/bootstrap-mdo-sfmoma-03.jpg" alt="">
+                                            <div class="carousel-caption">
+                                                <h5>
+                                                    借助U9单组织复杂制造</h5>
+                                                <p>
+                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                                    porta gravida at eget metus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a> <a class="right carousel-control"
+                                        href="#myCarousel" data-slide="next">›</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+            <div class="row-fluid">
+                <!-- Portlet Set 1 -->
+                <div class="span4 column" id="col1">
+                    <!-- Portlet: Browser Usage Graph -->
+                    <div class="box" id="box-0">
+                        <h4 class="box-header round-top">
+                            年度财务收支 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <div id="container0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!-- Portlet Set 2 -->
+                <div class="span4 column" id="col2">
+                    <!-- Portlet: Page Visit Graph -->
+                    <div class="box" id="box-4">
+                        <h4 class="box-header round-top">
+                            使用比例 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <div id="container1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!-- Portlet Set 3 -->
+                <div class="span4 column" id="col3">
+                    <!-- Portlet: Site Activity Gauges -->
+                    <div class="box" id="box-2">
+                        <h4 class="box-header round-top">
+                            人员项目 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <div id="container2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+            <div class="row-fluid">
+                <!-- Portlet Set 4 -->
+                <div class="span4 column" id="col4">
+                    <!-- Portlet: Site Activity Gauges -->
+                    <div class="box" id="box-3">
+                        <h4 class="box-header round-top">
+                            Blog <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <ul class="dashboard-member-activity">
+                                    <li><a href="#">
+                                        <img src="img/member_ph.png" class="dashboard-member-activity-avatar" /></a>
+                                        名称: <a href="#">John Doe</a><br />
+                                        日期: 21/01/2012<br />
+                                        状态: <span class="label label-success">Approved</span> </a> </li>
+                                    <li><a href="#">
+                                        <img src="img/member_ph.png" class="dashboard-member-activity-avatar" /></a>
+                                        名称: <a href="#">Jane Doe</a><br />
+                                        日期: 21/01/2012<br />
+                                        状态: <span class="label label-important">Banned</span> </a> </li>
+                                    <li><a href="#">
+                                        <img src="img/member_ph.png" class="dashboard-member-activity-avatar" /></a>
+                                        名称: <a href="#">Fred Flintstone</a><br />
+                                        日期: 21/01/2012<br />
+                                        状态: <span class="label label-warning">Pending</span> </a> </li>
+                                    <li><a href="#">
+                                        <img src="img/member_ph.png" class="dashboard-member-activity-avatar" /></a>
+                                        名称: <a href="#">Bat Man</a><br />
+                                        日期: 21/01/2012<br />
+                                        状态: <span class="label label-info">Updates</span> </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!-- Calendar -->
+                <div class="span8 column" id="col-calendar">
+                    <!-- Portlet: Event Calandar (Fixed) -->
+                    <div class="box" id="box-0">
+                        <h4 class="box-header round-top">
+                            日历 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <div class='row-fluid'>
+                                    <div id='calendar' class='span9'>
+                                    </div>
+                                    <div id='external-events' class='span3'>
+                                        <h4>
+                                            Draggable Events</h4>
+                                        <div class='external-event label label-info'>
+                                            项目会议</div>
+                                        <div class='external-event label label-info'>
+                                            还贷款</div>
+                                        <div class='external-event label label-info'>
+                                            Html5 技术交流</div>
+                                        <div class='external-event label label-info'>
+                                            U9 Next 展示</div>
+                                        <div class='external-event label label-info'>
+                                            CQRS 技术交流</div>
+                                        <form>
+                                        <label for='drop-remove'>
+                                            <input type='checkbox' id='drop-remove' name='remove' />
+                                            remove after drop
+                                        </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+            <div class="row-fluid">
+                <!-- Portlet Set 6 -->
+                <div class="span4 column" id="col6">
+                    <!-- Portlet: Site Activity Gauges -->
+                    <div class="box" id="box-5">
+                        <h4 class="box-header round-top">
+                            移动客户端下载 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <ul class="dashboard-member-activity">
+                                    <li><a href="#">
+                                        <img src="img/member_ph.png" class="dashboard-member-activity-avatar" />
+                                        <span class="blue"><strong>U9.Mobile</strong> on 21/02/2012</span></a>
+                                        <p>
+                                            使用说明：Android 2.1以上版本</p>
+                                        <a class="btn btn-success" href="#"><i class="icon-download icon-white"></i>下载安装包
+                                        </a></li>
+                                    <li><a href="#">
+                                        <img src="img/member_ph.png" class="dashboard-member-activity-avatar" />
+                                        <span class="blue"><strong>U9.Mobile</strong> on 21/02/2012</span></a>
+                                        <p>
+                                            使用说明：IOS 3以上版本</p>
+                                        <a class="btn btn-success" href="#"><i class="icon-download icon-white"></i>下载安装包
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <div class="span8 column" id="col-user">
+                    <!-- Portlet: Browser Usage Graph -->
+                    <div class="box" id="box-1">
+                        <h4 class="box-header round-top">
+                            用户管理 <a class="box-btn" title="close"><i class="icon-remove"></i></a><a class="box-btn"
+                                title="toggle"><i class="icon-minus"></i></a><a class="box-btn" title="config" data-toggle="modal"
+                                    href="#box-config-modal"><i class="icon-cog"></i></a>
+                        </h4>
+                        <div class="box-container-toggle">
+                            <div class="box-content">
+                                <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered bootstrap-datatable"
+                                    id="datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                用户名称
+                                            </th>
+                                            <th>
+                                                注册日期
+                                            </th>
+                                            <th>
+                                                角色
+                                            </th>
+                                            <th>
+                                                状态
+                                            </th>
+                                            <th>
+                                                操作
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Fred Flinstone
+                                            </td>
+                                            <td class="center">
+                                                2011/01/01
+                                            </td>
+                                            <td class="center">
+                                                Member
+                                            </td>
+                                            <td class="center">
+                                                <span class="label label-success">Active</span>
+                                            </td>
+                                            <td class="center">
+                                                <a class="btn btn-success" href="#"><i class="icon-zoom-in icon-white"></i>查看 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Spiderman
+                                            </td>
+                                            <td class="center">
+                                                2011/02/01
+                                            </td>
+                                            <td class="center">
+                                                Staff
+                                            </td>
+                                            <td class="center">
+                                                <span class="label label-important">Banned</span>
+                                            </td>
+                                            <td class="center">
+                                                <a class="btn btn-info" href="#"><i class="icon-edit icon-white"></i>编辑 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Batman
+                                            </td>
+                                            <td class="center">
+                                                2011/02/01
+                                            </td>
+                                            <td class="center">
+                                                Admin
+                                            </td>
+                                            <td class="center">
+                                                <span class="label">Inactive</span>
+                                            </td>
+                                            <td class="center">
+                                                <a class="btn btn-danger" href="#"><i class="icon-trash icon-white"></i>删除 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Robin
+                                            </td>
+                                            <td class="center">
+                                                2011/03/01
+                                            </td>
+                                            <td class="center">
+                                                Member
+                                            </td>
+                                            <td class="center">
+                                                <span class="label label-warning">Pending</span>
+                                            </td>
+                                            <td class="center">
+                                                <a class="btn btn-info" href="#"><i class="icon-edit icon-white"></i>编辑 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                TazmanianDevil
+                                            </td>
+                                            <td class="center">
+                                                2011/03/01
+                                            </td>
+                                            <td class="center">
+                                                Member
+                                            </td>
+                                            <td class="center">
+                                                <span class="label label-warning">Pending</span>
+                                            </td>
+                                            <td class="center">
+                                                <a class="btn btn-danger" href="#"><i class="icon-trash icon-white"></i>删除 </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+        </div>
+        <!--/row-->
+        <!-- footer -->
+        <footer>
+       &copy;<a href="">U9 nExt &trade;</a> Designed by U9 UFIDA<br>
+             <a href="" class="new_window">Software Models</a> provided by U9.com<br>
+
+        </footer>
+        <div id="box-config-modal" class="modal hide fade in" style="display: none;">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">
+                    ×</button>
+                <h5 class="text-warning">
+                    配置部件</h5>
+            </div>
+            <div class="modal-body">
+                <p>
+                    定制部件内显示行数、显示项目等 come soon!</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" data-dismiss="modal">Save Changes</a> <a href="#"
+                    class="btn" data-dismiss="modal">Cancel</a>
+            </div>
+        </div>
+        <!--/.fluid-container-->
+        <!-- javascript Templates
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script data-main="js/main" src="js/libs/require/require.min.js"></script>
+        <!-- Data Tables -->
+        <!--script src="scripts/DataTables/media/js/jquery.dataTables.js"></script>
+        
+    	  <!-- Bootstrap Date Picker -->
+        <!--script src="scripts/datepicker/js/bootstrap-datepicker.js"></script-->
+        <!-- CK Editor -->
+        <!--script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
+    	<script type="text/javascript" src="scripts/ckeditor/adapters/jquery.js"></script-->
+        <!-- Uniform -->
+        <!--script type="text/javascript" language="javascript" src="scripts/uniform/jquery.uniform.min.js"></script-->
+        <!-- MultiFile Upload -->
+        <!-- Error messages for the upload/download templates -->
+        <!-- The Templates plugin is included to render the upload/download listings -->
+        <!--script src="scripts/JavaScript-Templates/tmpl.min.js"></script-->
+        <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+        <!--script src="scripts/JavaScript-Load-Image/load-image.min.js"></script>
+        <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+        <!--script src="scripts/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js"></script-->
+        <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+        <!--script src="scripts/blueimp-jQuery-File-Upload/js/jquery.iframe-transport.js"><script-->
+        <!-- The basic File Upload plugin -->
+        <!--script src="scripts/blueimp-jQuery-File-Upload/js/jquery.fileupload.js"></script-->
+        <!-- The File Upload image processing plugin -->
+        <!--script src="scripts/blueimp-jQuery-File-Upload/js/jquery.fileupload-ip.js"></script-->
+        <!-- The File Upload user interface plugin -->
+        <!--script src="scripts/blueimp-jQuery-File-Upload/js/jquery.fileupload-ui.js"></script-->
+        <!-- The main application script -->
+        <!--script src="scripts/blueimp-jQuery-File-Upload/js/main.js"></script-->
+        <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
+        <!--[if gte IE 8]><!--script src="scripts/blueimp-jQuery-File-Upload/js/cors/jquery.xdr-transport.js"></script><![endif]-->
+    </body>
+</html>

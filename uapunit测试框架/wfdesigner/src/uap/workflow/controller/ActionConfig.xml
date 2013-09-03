@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller>
+  <ActionConfigs >
+    <ActionConfig code="savedeploy" handler="uap.workflow.handler.DefaultHandler" 
+	    action="uap.workflow.action.SaveAndDeployAction">
+    </ActionConfig>
+    <ActionConfig code="savefile" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.SaveFileAction">
+    </ActionConfig>
+    <ActionConfig code="openprocess" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.OpenProcessAction">
+    </ActionConfig>
+    <ActionConfig code="openfile" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.OpenFileAction">
+    </ActionConfig>
+    <ActionConfig code="export" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.ExportAction">
+    </ActionConfig>
+    <ActionConfig code="queryuser" handler="uap.workflow.handler.QueryUserHandler" 
+    	action="uap.workflow.action.QueryUserAction">
+    </ActionConfig>
+    <ActionConfig code="querywf" handler="uap.workflow.handler.QueryUserHandler" 
+    	action="uap.workflow.manager.QueryWf">
+    </ActionConfig>
+    <ActionConfig code="metadataUtil" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.MetadataUtil">
+    </ActionConfig>
+    <ActionConfig code="exprUtil" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.ExprValidate">
+    </ActionConfig>
+    <ActionConfig code="referenceUtil" handler="uap.workflow.handler.DefaultHandler" 
+    	action="uap.workflow.action.ReferenceUtil">
+    </ActionConfig>
+  </ActionConfigs >
+ </Controller>

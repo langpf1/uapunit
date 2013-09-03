@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="nc.uap.workflow.WFEJB">
+	<public>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.service.RepositoryService</interface>
+			<implementation>uap.workflow.engine.query.RepositoryServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.service.RuntimeService</interface>
+			<implementation>uap.workflow.engine.query.RuntimeServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.service.TaskService</interface>
+			<implementation>uap.workflow.engine.query.TaskServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.service.HistoryService</interface>
+			<implementation>uap.workflow.engine.query.HistoryServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.service.IdentityService</interface>
+			<implementation>uap.workflow.engine.query.IdentityServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.service.ManagementService</interface>
+			<implementation>uap.workflow.engine.query.ManagementServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IProcessDefinitionQry</interface>
+			<implementation>uap.workflow.engine.impl.ProcessDefinitionQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IProcessDefinitionBill</interface>
+			<implementation>uap.workflow.engine.impl.ProcessDefinitionBill</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IProcessInstanceQry</interface>
+			<implementation>uap.workflow.engine.impl.ProcessInstanceQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IProcessInstanceBill</interface>
+			<implementation>uap.workflow.engine.impl.ProcessInstanceBill</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IWorkflowInstanceQry</interface>
+			<implementation>uap.workflow.engine.impl.WorkflowInstanceQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IWorkflowInstanceBill</interface>
+			<implementation>uap.workflow.engine.impl.WorkflowInstanceBill</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.ITaskInstanceQry</interface>
+			<implementation>uap.workflow.engine.impl.TaskInstanceQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.ITaskInstanceBill</interface>
+			<implementation>uap.workflow.engine.impl.TaskInstanceBill</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="false">
+			<interface>uap.workflow.engine.server.IProcessEngine</interface>
+			<implementation>uap.workflow.engine.server.ProcessEngine</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IAssignmentBill</interface>
+			<implementation>uap.workflow.engine.impl.AssignmentBill</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IAssignmentQry</interface>
+			<implementation>uap.workflow.engine.impl.AssignmentQry</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IVariableInstanceQry</interface>
+			<implementation>uap.workflow.engine.impl.VariableInstanceQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IVariableInstanceBill</interface>
+			<implementation>uap.workflow.engine.impl.VariableInstanceBill</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IVariableInstanceQry</interface>
+			<implementation>uap.workflow.engine.impl.VariableInstanceQry</implementation>
+		</component>
+
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.app.participant.IParticipantService</interface>
+			<implementation>uap.workflow.app.participant.ParticipantServiceImpl</implementation>
+		</component>
+		<component remote="true" singleton="true" tx="CMT">
+			<interface>uap.workflow.app.taskhandling.ITaskHandlingService</interface>
+			<implementation>uap.workflow.app.taskhandling.TaskHandleServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IBeforeAddSignQry</interface>
+			<implementation>uap.workflow.engine.impl.BeforeAddSignQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IBeforeAddSignBill</interface>
+			<implementation>uap.workflow.engine.impl.BeforeAddSignBill</implementation>
+		</component>
+
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IEventSubscriptionQry</interface>
+			<implementation>uap.workflow.engine.impl.EventSubscriptionQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IEventSubscriptionBill</interface>
+			<implementation>uap.workflow.engine.impl.EventSubscriptionBill</implementation>
+		</component>
+
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IJobQry</interface>
+			<implementation>uap.workflow.engine.impl.JobQry</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IJobBill</interface>
+			<implementation>uap.workflow.engine.impl.JobBill</implementation>
+		</component>
+
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IDeployService</interface>
+			<implementation>uap.workflow.engine.impl.DeployService</implementation>
+		</component>
+
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.admin.IWorkflowMachine</interface>
+			<implementation>uap.workflow.app.impl.WorkflowMachineImpl</implementation>
+		</component>
+
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>
+				uap.workflow.nc.participant.wfusergroup.IWfUserGroupQueryService
+			</interface>
+			<implementation>
+				uap.workflow.nc.participant.wfusergroup.WfUserGroupQueryServiceImpl
+			</implementation>
+		</component>
+
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.app.action.IplatFormEntry</interface>
+			<implementation>uap.workflow.app.action.impl.PlatFormEntryImpl</implementation>
+		</component>
+
+		<component remote="true" singleton="true" tx="CMT">
+			<interface>uap.workflow.admin.IWorkflowAdmin</interface>
+			<implementation>uap.workflow.app.impl.WorkflowAdminImpl</implementation>
+		</component>
+
+		<component remote="true" singleton="true" tx="CMT">
+			<interface>uap.workflow.app.action.IPFBusiAction</interface>
+			<implementation>uap.workflow.app.action.impl.PFBusiAction</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IProcessDefGroupQry</interface>
+			<implementation>uap.workflow.engine.impl.ProcessDefGroupQry</implementation>
+		</component>
+		<component remote="true" singleton="true" tx="CMT">
+			<interface>uap.workflow.admin.IWorkflowDefine</interface>
+			<implementation>uap.workflow.app.impl.WorkflowDefineImpl</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IUserTaskInfo</interface>
+			<implementation>uap.workflow.engine.utils.NextUserTaskInfoUtil</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>uap.workflow.engine.itf.IFormTransferService</interface>
+			<implementation>uap.workflow.engine.impl.FormTransferService</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>test.biz.purchaseorder.itf.IServicesInterface</interface>
+			<implementation>test.biz.purchaseorder.service.Services</implementation>
+		</component>
+		<component singleton="true" tx="CMT" remote="true">
+			<interface>test.biz.praybill.itf.IServicesInterface</interface>
+			<implementation>test.biz.praybill.service.Services</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>test.biz.rcvbill.itf.IServicesInterface</interface>
+			<implementation>test.biz.rcvbill.service.Services</implementation>
+		</component>
+				<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.actsgy.IActorService</interface>
+			<implementation>uap.workflow.engine.actsgy.ActorService</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.itf.IWorkflowServiceUtil</interface>
+			<implementation>uap.workflow.app.impl.WorkflowServiceUtil</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.admin.IWFEngineService</interface>
+			<implementation>uap.workflow.app.impl.WFEngineServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.admin.IWFAdminService</interface>
+			<implementation>uap.workflow.app.impl.WFAdminServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.admin.IWFDefineService</interface>
+			<implementation>uap.workflow.app.impl.WFDefineServiceImpl</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IExtensionConfig</interface>
+			<implementation>uap.workflow.engine.impl.ExtensionConfigImpl</implementation>
+		</component>
+		<component singleton="true" tx="NONE" remote="true">
+			<interface>uap.workflow.engine.itf.IExpressionValidate</interface>
+			<implementation>uap.workflow.engine.impl.ExpressionValidateImpl</implementation>
+		</component>
+		</public>
+	<private>
+	</private>
+</module>
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>任务列表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/select2.css" rel="stylesheet">
+    <link href="css/bootstrap-editable.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" id="main-theme-script">
+  <link href="css/themes/default.css" rel="stylesheet" id="theme-specific-script">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <!-- bootstrap-editable -->
+  <!-- Full Calender -->
+  <link href="css/fullcalendar.css" rel="stylesheet" type="text/css" />
+  <!-- Bootstrap Date Picker -->
+  <!-- <link href="scripts/datepicker/css/datepicker.css" rel="stylesheet">
+  -->
+  <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+  <!-- <link rel="stylesheet" href="scripts/blueimp-jQuery-File-Upload/css/jquery.fileupload-ui.css">
+  -->
+  <!-- Bootstrap Image Gallery styles -->
+  <link href="css/bootstrap-tags.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+  <link href="css/u9next.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/loading.css">
+  <!-- Uniform -->
+  <!-- <link rel="stylesheet" type="text/css" media="screen,projection" href="scripts/uniform/css/uniform.default.css" />
+  -->
+  <!-- Chosen multiselect -->
+  <!--link type="text/css" href="scripts/chosen/chosen/chosen.intenso.css" rel="stylesheet" /-->
+  <!-- u9next -->
+  <!-- <link href="css/u9next.css" rel="stylesheet">
+  -->
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="../../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if IE]>
+  <script type="text/javascript" src=js/utils.js></script>
+  <![endif]-->
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="img/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png"></head>
+
+<body>
+  <!-- Top navigation bar -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="logoctn">
+          <a class="brand" href="index.html">
+            <img class="logo" src="img/logo.jpg">&nbsp;WorkfloW</a>
+        </div>
+        <div class="btn-group pull-right">
+          <a class="btn dropdown-toggle"  data-toggle="dropdown" href="#"> <i id="user-name"></i> <i class="icon-user"></i>
+            <span class="label label-info">100</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Profile</a>
+            </li>
+            <li>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <a class="cookie-delete" href="#">Delete Cookies</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#" id="logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dropdown" id="messages">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                全部模块 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                  <a href="#">财务</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a href="#">总账</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">基础设置</a>
+                        </li>
+                        <li>
+                          <a href="#">期初</a>
+                        </li>
+                        <li>
+                          <a href="#">凭证模板</a>
+                        </li>
+                        <li>
+                          <a href="#">凭证</a>
+                        </li>
+                        <li>
+                          <a href="#">科目核销</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">应收管理</a>
+                    </li>
+                    <li>
+                      <a href="#">税务发票</a>
+                    </li>
+                    <li>
+                      <a href="#">固定资产</a>
+                    </li>
+                    <li>
+                      <a href="#">现金流监控</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="tasklist.html">任务中心</a>
+                </li>
+                <li>
+                  <a href="wfmanager.html">流程管理</a>
+                </li>
+                <li>
+                  <a href="wfdesigner.html">流程设计</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#">Older messages...</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown" id="settings">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                设置 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Personal Info</a>
+                </li>
+                <li>
+                  <a href="#">Preferences</a>
+                </li>
+                <li>
+                  <a href="#">Alerts</a>
+                </li>
+                <li>
+                  <a class="cookie-delete" href="#">Delete Cookies</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown" id="theme">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                主题
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="theme-switch-default" href="#">Default</a>
+                </li>
+                <li>
+                  <a class="theme-switch-amelia" href="#">Amelia</a>
+                </li>
+                <li>
+                  <a class="theme-switch-cerulean" href="#">Cerulean</a>
+                </li>
+                <li>
+                  <a class="theme-switch-journal" href="#">Journal</a>
+                </li>
+                <li>
+                  <a class="theme-switch-readable" href="#">Readable</a>
+                </li>
+                <li>
+                  <a class="theme-switch-simplex" href="#">Simplex</a>
+                </li>
+                <li>
+                  <a class="theme-switch-slate" href="#">Slate</a>
+                </li>
+                <li>
+                  <a class="theme-switch-spacelab" href="#">Spacelab</a>
+                </li>
+                <li>
+                  <a class="theme-switch-spruce" href="#">Spruce</a>
+                </li>
+                <li>
+                  <a class="theme-switch-superhero" href="#">Superhero</a>
+                </li>
+                <li>
+                  <a class="theme-switch-united" href="#">United</a>
+                </li>
+              </ul>
+            </li>
+            <li id="users">
+              <a href="#">用户管理</a>
+            </li>
+            <li id="apps">
+              <a href="#">联邦应用</a>
+            </li>
+            <li id="help">
+              <a href="#">帮助</a>
+            </li>
+          </ul>
+          <!--form class="navbar-search pull-right">
+          <input type="text" class="search-query" placeholder="Search"></form-->
+      </div>
+      <!--/.nav-collapse --> </div>
+  </div>
+</div>
+<!-- Main Content Area -->
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12 column" id="col0">
+      <div class="box" id="box-0">
+        <h4 class="box-header round-top">
+          任务列表
+          <a class="box-btn" title="close"> <i class="icon-remove"></i>
+          </a>
+          <a class="box-btn" title="toggle">
+            <i class="icon-minus"></i>
+          </a>
+          <a class="box-btn" title="config" data-toggle="modal" href="#box-config-modal">
+            <i class="icon-cog"></i>
+          </a>
+        </h4>
+        <div class="box-container-toggle">
+          <div class="box-content">
+            <form class="form-horizontal">
+              <div class="row-fluid">
+                <div class="span2">
+                  <br>
+                  <label> <strong>查询方案</strong>
+                  </label>
+                  <label class="checkbox"  for="future">
+                    <input type="checkbox" id="future">未提交申请</label>
+                  <label class="checkbox" for="work">
+                    <input type="checkbox" id="work">审批中申请</label>
+                  <label class="checkbox" for="finish">
+                    <input type="checkbox" id="finish">已完成申请</label>
+                  <label class="input">
+                    申请组织:
+                    <input type="text" class="input-medium"></label>
+                  <label class="input">
+                    单据号:
+                    <input type="text" class="input-medium"></label>
+                  <label class="input">
+                    客户所属组织:
+                    <input type="text" class="input-medium"></label>
+                  <label class="input">
+                    客户编码:
+                    <input type="text" class="input-medium"></label>
+                  <br>
+                  <button type="button" class="btn">清空值</button>
+                  <button type="button" class="btn">查询</button>
+                </div>
+                <div class="tabbable tabs-below span10"  id="tasklist-container">
+                  <div class="tab-content">
+                    <div  class="tab-pane active" id="todo-container"></div>
+                    <div  class="tab-pane" id="toread-container"></div>
+                    <div  class="tab-pane" id="doing-container"></div>
+                    <div  class="tab-pane" id="complated-container"></div>
+                  </div>
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#todo-container" data-toggle="tab">待办</a>
+                    </li>
+                    <li>
+                      <a href="#toread-container" data-toggle="tab">待阅</a>
+                    </li>
+                    <li>
+                      <a href="#doing-container" data-toggle="tab">在办</a>
+                    </li>
+                    <li>
+                      <a href="#complated-container" data-toggle="tab">已办</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="span10"  id="pagination-container"> </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div  class="span10 modal-position" id="modal-container"></div>
+  </div>
+</div>
+<!-- <footer>
+&copy;
+<a href="">UFIDA&trade;</a>
+provided by UFIDA
+</footer>
+-->
+<script data-main="js/task/main" src="js/libs/require/require.min.js"></script>
+<script type="text/javascript" src="js/libs/holder.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Bpmn2MemoryModel
+Process
+UserTask
+event.EndEvent
+SequenceFlow
+event.StartEvent
+BpmnDiagram
+BpmnPlane
+BpmnShape
+BpmnEdge
+BpmnBounds
+BpmnWayPoint

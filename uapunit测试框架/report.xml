@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="test" default="coverage" basedir=".">
+
+	<property file="build.properties" />
+
+	<path id="lib.classpath">
+		<fileset dir="${Ant.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${Product.Common.lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${Middleware.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${Framework.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="${Modules.lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar" />
+			<include name="**/**/*.jar" />
+		</fileset>
+		<fileset dir="${Modules.Lang.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="external.classpath">
+		<fileset dir="${Product.External.lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="uatlib.classpath">
+		<fileset dir="${uatlib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="enginelib.classpath">
+		<fileset dir="${enginelib.dir}">
+			<include name="**/*.jar" />
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef classpathref="uatlib.classpath" resource="tasks.properties" />
+	<taskdef classpathref="uatlib.classpath" resource="testngtasks" />
+
+	<target name="coverage-report">
+		<cobertura-report destdir="${coverage.cobertura.xml.dir}" format="xml">
+
+			<include name="**/engine/src/**/public/**/*.java" />
+			<include name="**/engine/src/**/private/**/*.java" />
+			<include name="**/engine/src/**/client/**/*.java" />
+
+			<include name="**/WorkflowApp/src/**/public/**/*.java" />
+			<include name="**/WorkflowApp/src/**/private/**/*.java" />
+			<include name="**/WorkflowApp/src/**/client/**/*.java" />
+		</cobertura-report>
+	</target>
+
+	<target name="alternate-coverage-report">
+		<cobertura-report destdir="${coverage.cobertura.html.dir}" format="html">
+
+			<include name="**/engine/src/**/public/**/*.java" />
+			<include name="**/engine/src/**/private/**/*.java" />
+			<include name="**/engine/src/**/client/**/*.java" />
+
+			<include name="**/WorkflowApp/src/**/public/**/*.java" />
+			<include name="**/WorkflowApp/src/**/private/**/*.java" />
+			<include name="**/WorkflowApp/src/**/client/**/*.java" />
+
+		</cobertura-report>
+	</target>
+
+	<target name="coverage" depends="coverage-report,alternate-coverage-report" />
+
+</project>

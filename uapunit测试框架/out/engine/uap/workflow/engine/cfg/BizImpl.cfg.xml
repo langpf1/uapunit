@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+  <extendProperties>
+     <extendProperty notationType="UserTask" classImpl="uap.workflow.modeler.uecomponent.ExtendEditorDlg"/>
+     <extendProperty notationType="ScriptTask" classImpl="uap.workflow.modeler.uecomponent.ExtendEditorDlg2"/>
+     <extendProperty notationType="SequenceFlow" classImpl="uap.workflow.modeler.uecomponent.ExtendEditorDlg"/>
+  </extendProperties>
+	<extensionFunctions>
+		<function namespace="" name="" method="" parameters="String, String"/>
+	</extensionFunctions>
+	<extensionVarables>
+		<variable/>
+	</extensionVarables>
+	<extensionResolvers>
+		<resolver class="uap.workflow.bizimpl.expression.NCMetadataElResolver"/>
+	</extensionResolvers>
+	<extensionListeners>
+		<listener event="take" listenerType="execution" name="CompatibleAction" description="Compatible Action" implementation="uap.workflow.bizimpl.listener.ListenerBizImplExtend" method="execute" parameters="uap.workflow.engine.core.IActivityInstance"/>
+		<listener event="" listenerType="execution" name="OAExtension" description="OAExtension" implementation="nc.uap.engine.test.Testclass" method="execute" parameters="uap.workflow.engine.core.IActivityInstance"/>
+
+	</extensionListeners>
+	<extensionService>
+		<service name="GenerateBill" class="uap.workflow.bizimpl.bizinvocation.GenerateBillActivityBehavior"/>
+		<service name="WorkflowGadget" class="uap.workflow.bizimpl.bizinvocation.GadgetInvocationActivityBehavior"/>
+	</extensionService>
+</configuration>

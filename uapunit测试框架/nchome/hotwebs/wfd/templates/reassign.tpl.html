@@ -1,0 +1,39 @@
+<div id="reassign" class="modal hide fade" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal">&times;</a>
+    改派
+  </div>
+  <div class="modal-body">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#reassign-tab" data-toggle="tab">改派</a>
+      </li>
+      <li>
+        <a href="#cctab" data-toggle="tab">抄送</a>
+      </li>
+      <li>
+        <a href="#attachment" data-toggle="tab">附件</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="reassign-container">
+      <div class="tab-pane active" id="reassign-tab">
+        <a href="#" id="reassign-add-user" data-type="select2" data-pk="1" data-original-title="选择改派人">添加改派人：</a>
+        <div style="width:16em" class="tag-list" id="reassign-user-tag">
+          <div class="tags"></div>
+        </div>
+        <br>
+        <textarea id="reassign-comment"  rows="6" class="span12" placeholder="备注">
+          <%= reassignModel.get('comment') %></textarea>
+        <label class="checkbox" for="track">
+          <input type="checkbox" <% if(reassignModel.get('track')) {%>
+          <%='checked ' %>
+          <%} %>id="reassign-track">跟踪</label>
+      </div>
+      <div class="tab-pane"  id="cctab"></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary" id="reassign-ok">确定</a>
+    <a href="#" class="btn" id="reassign-cancel">取消</a>
+  </div>
+</div>

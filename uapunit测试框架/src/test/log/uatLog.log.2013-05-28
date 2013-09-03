@@ -1,0 +1,85 @@
+[13 05 28 16:18:51,124 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
+[13 05 28 16:18:51,140 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
+[13 05 28 16:18:51,140 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 28 16:18:51,140 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 28 16:18:51,140 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 28 16:18:51,140 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-28 16:18:51
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 28 16:18:51,265 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 28 16:18:51,296 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:51,468 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:57,997 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
+[13 05 28 16:18:58,012 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
+[13 05 28 16:18:58,012 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 28 16:18:58,012 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 28 16:18:58,012 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 28 16:18:58,012 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-28 16:18:58
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 28 16:18:58,137 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 28 16:18:58,153 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:58,325 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:58,434 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:58,543 INFO ] [main] com.yonyou.uat.dao.BaseDao - sql: select * from db_provider where  methodname =? and classname =? ORDER BY testcase_id ASC
+[13 05 28 16:18:58,543 INFO ] [main] com.yonyou.uat.dao.BaseDao - params: [Ljava.lang.Object;@18ce14a
+[13 05 28 16:18:58,871 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:59,028 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:59,309 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
+[13 05 28 16:18:59,309 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
+[13 05 28 16:18:59,309 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer before status: null
+[13 05 28 16:18:59,309 INFO ] [main] workflowapp.nc.tc.util.BaseTestCase - engine @BeforeSuite  ncServer after status: null
+[13 05 28 16:18:59,309 DEBUG] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - backup begin...
+[13 05 28 16:18:59,309 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit begin.....
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Project Name: platform
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Application Version: V6.0
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Summary: null
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test Date: 2013-05-28 16:18:59
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - System information:
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System=Windows 2003
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    Test Machine System Version=5.2
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - Test DataSourceInfo:(DataSourceName:DBType:DBURL:UserName)
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    design:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:baptest807
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bafi:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bafi
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    iufo6103312:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:iufo6103312
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    batm:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:batm
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    bap8:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:bap8
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl -    foodmart:ORACLE11G:jdbc:oracle:thin:@20.10.130.235:1521:orcl:foodmart
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultLoggerImpl - ==============================================================================================================================================
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.context.impl.TestResultWriterImpl - writeLogBeforeSuit end.....
+[13 05 28 16:18:59,324 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:18:59,481 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:19:02,120 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:19:02,323 INFO ] [main] com.yonyou.uat.dao.BaseDao - sql: select * from db_provider where  methodname =? and classname =? ORDER BY testcase_id ASC
+[13 05 28 16:19:02,526 INFO ] [main] com.yonyou.uat.dao.BaseDao - params: [Ljava.lang.Object;@9e8c34
+[13 05 28 16:19:02,542 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls
+[13 05 28 16:19:02,698 INFO ] [main] com.yonyou.uat.util.ExcelDataProvider - excelPath:D:/uattest/workflow/bin/resources\datafile\data_excelfile\IWFDefineServiceTest.xls

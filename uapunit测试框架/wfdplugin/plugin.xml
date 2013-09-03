@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Test Action Set"
+            visible="true"
+            id="myplugin.actionSet">
+         <menu
+               label="Test &amp;Menu"
+               id="TestMenu">
+            <separator
+                  name="TestGroup">
+            </separator>
+         </menu>
+         <action
+               label="&amp;Test Action"
+               icon="icons/sample.gif"
+               class="uap.workflow.wfdplugin.action.WorkflowAction"
+               tooltip="Hello, Eclipse world"
+               menubarPath="TestMenu/TestGroup"
+               toolbarPath="TestGroup"
+               id="uap.workflow.wfdplugin.action.WorkflowAction">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+         <perspective
+               name="&amp;Sample perspective"
+               icon="icons/sample.gif"
+               class="uap.workflow.wfdplugin.perspctive.SamplePerspective"
+               id="uap.workflow.wfdplugin.perspctive.SamplePerspective">
+         </perspective>
+   </extension>  
+   
+   <extension
+         point="org.eclipse.ui.views">
+         <category
+               name="Sample 视图"
+               id="uap.workflow.wfdplugin.view">
+         </category>
+         <view 
+               name="视图 1"
+               icon="icons/sample.gif"
+               category="uap.workflow.wfdplugin.view"
+               class="uap.workflow.wfdplugin.view.ExplorerView"
+               id="uap.workflow.wfdplugin.view.ExplorerView">
+         </view>
+   </extension>   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="uap.workflow.wfdplugin.editor.WindowBrowserEditor"
+            default="true"
+            extensions=".bpmn20.xml"
+            icon="icons/editor.gif"
+            id="uap.workflow.wfdplugin.editor.WindowBrowserEditor"
+            name="%editor.name.30"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="uap.workflow.wfdplugin.editor.ViewBrowserEditor"
+            default="true"
+            extensions=".bpmn20.xml"
+            icon="icons/editor.gif"
+            id="uap.workflow.wfdplugin.editor.ViewBrowserEditor"
+            name="%editor.name.31"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="uap.workflow.wfdplugin.editor.PublicViewBrowserEditor"
+            default="true"
+            extensions=".bpmn20.xml"
+            icon="icons/editor.gif"
+            id="uap.workflow.wfdplugin.editor.PublicViewBrowserEditor"
+            name="%editor.name.32"/>
+   </extension>  
+</plugin>

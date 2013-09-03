@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="nc.tc.uap.workflow.admin.IWFEngineServiceTest">
+        <methods>
+          <include name="baseBeforeSuite"/>
+          <include name="startWorkflow"/>
+          <include name="getTasks"/>
+          <include name="beforeAddSign"/>
+          <include name="getWorkitem"/>
+          <include name="forwardWorkflow"/>
+          <include name="checkUnfinishedWorkitem"/>
+          <include name="signalWorkflow"/>
+          <include name="beforeClass"/>
+          <include name="BeforeClass"/>
+          <include name="rollbackWorkflow"/>
+          <include name="cancelSubmitWorkflow"/>
+          <include name="delegateTask"/>
+          <include name="getWorkflowItemsOnStart"/>
+          <include name="afterAddSign"/>
+          <include name="getWorkflowComplex"/>
+        </methods>
+      </class> <!-- nc.tc.uap.workflow.admin.IWFEngineServiceTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

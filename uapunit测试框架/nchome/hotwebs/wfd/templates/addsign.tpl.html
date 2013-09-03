@@ -1,0 +1,52 @@
+<div id="addsign" class="modal hide fade" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal">&times;</a>
+    加签
+  </div>
+  <div class="modal-body">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#tab1" data-toggle="tab">加签</a>
+      </li>
+      <li>
+        <a href="#cctab" data-toggle="tab">抄送</a>
+      </li>
+      <li>
+        <a href="#tab3" data-toggle="tab">附件</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="addsign-container">
+      <div class="tab-pane active" id="tab1">
+        <a href="#" id="addsign-add-user" data-type="select2" data-pk="1" data-original-title="选择加签人">添加加签人：</a>
+        <div style="width:33em" class="tag-list" id="addsign-user-tag">
+          <div class="tags"></div>
+        </div>
+        <br>
+        <a href="#" id="addsign-add-role" data-type="select2" data-pk="1" data-value="BS" data-original-title="选择加签角色">添加加签角色：</a>
+        <div style="width:33em"  class="tag-list" id="addsign-role-tag">
+          <div class="tags"></div>
+        </div>
+        <textarea id="addsign-comment"  rows="6" class="span12" placeholder="备注"><%= addsignModel.get('comment') %></textarea>
+        <form class="form-inline">
+          <label  class="checkbox" for="track">
+            <input type="checkbox" <% if(addsignModel.get('track')) {%>
+            <%='checked ' %>
+            <%} %>id="addsign-track">跟踪</label>
+          <label  for="addsign-before">
+            <input type="radio" name='addsign-type'<% if(addsignModel.get('addsignType')==Common.WF.ADDSIGN_TYPE.BEFORE) {%>
+            <%='checked ' %>
+            <%} %>id="addsign-before"> 前加签</label>
+          <label for="addsign-after">
+            <input type="radio"name='addsign-type' <% if(addsignModel.get('addsignType')==Common.WF.ADDSIGN_TYPE.AFTER) {%>
+            <%='checked ' %>
+            <%} %>id="addsign-after"> 后加签</label>
+        </form>
+      </div>
+      <div class="tab-pane"  id="cctab"></div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary" id="addsign-ok">确定</a>
+    <a href="#" class="btn" id="addsign-cancel">取消</a>
+  </div>
+</div>

@@ -1,0 +1,305 @@
+<!DOCTYPE html> 
+	<html> 
+	<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>notice config</title>
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../css/easyui/icon.css">
+	<link rel="stylesheet" type="text/css" href="../../css/refcss/wfex.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="../../js/libs/easyui/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="../../js/libs/easyui/jquery.easyui.min.js"></script>	
+	<script type="text/javascript">
+		var RESOURCES_PATH = '../../resources';
+		var RESOURCE_BASE = RESOURCES_PATH + '/dialog';
+		var urlParams = (function(url)
+		{	
+			var result = new Object();
+			var idx = url.lastIndexOf('?');
+	
+			if (idx > 0)
+			{
+				var params = url.substring(idx + 1).split('&');
+				
+				for (var i = 0; i < params.length; i++)
+				{
+					idx = params[i].indexOf('=');
+					
+					if (idx > 0)
+					{
+						result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+					}
+				}
+			}
+			
+			return result;
+		})(window.location.href);
+		// Sets the base path, the UI language via URL param and configures the
+		// supported languages to avoid 404s. The loading of all core language
+		// resources is disabled as all required resources are in grapheditor.
+		// properties. Note that in this example the loading of two resource
+		// files (the special bundle and the default bundle) is disabled to
+		// save a GET request. This requires that all resources be present in
+		// each properties file since only one file is loaded.
+		mxLoadResources = true
+		mxBasePath = '../../js';
+		mxLanguage = urlParams['lang'];
+		mxLanguages = ['de','zh-cn'];
+	</script>	
+	<script type="text/javascript" src="../../js/mxgraph/mxClient.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxEvent.js"></script>
+	<script type="text/javascript" src="../../js/mxgraph/util/mxResources.js"></script>
+	<script type="text/javascript" src="../../js/model.js"></script>
+	<script type="text/javascript" src="../../js/libs/json/json2.js"></script>
+	</head> 
+	<body class="easyui-layout" onload= "initialize();"> 
+	<div data-options="region:'center'">
+	<table id="dg" class="easyui-datagrid" title=" " style="width:auto;height:335px;border:4px" border= 0 
+	data-options="iconCls: 'icon-edit', singleSelect: true, toolbar: '#tb', onClickRow: onClickRow 	"> 
+	</table>
+	 </div>
+    <div data-options="region:'east',split:true" style="width:100px;height:50px;" id="buttonsContainer" onresize="resizeButtonsPnl();">
+	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add'" id='new' onclick="append()">&nbspNew</a> 
+	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" id='remove' onclick="remove()">Remove</a> 
+	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo'" id='up' onclick="onUp()">&nbspUp&nbsp</a> 
+	<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search'" id='down' onclick="onDown()">&nbspDown</a> 
+	</div> 
+	<div data-options="region:'south',split:true" title="" style="height:60px;padding:0px;background:#efefef">
+   <center>
+   <a class="easyui-linkbutton" href="javascript:void(0)" id='ok' onclick="onOK()" style="region:'center'">&nbspOK&nbsp&nbsp</a>
+   <a class="easyui-linkbutton" href="javascript:void(0)" id='cancel' onclick="onCancel()" style="region:'center'">Cancel</a>
+ </center>
+ </div>   
+	<script type="text/javascript"> 
+	function LocalResources(){}
+       mxResources.loadDefaultBundle = false;
+ 	   mxResources.add(RESOURCE_BASE); 
+ 	   LocalResources.OK=mxResources.get("ok");      
+	   LocalResources.CANCEL=mxResources.get("cancel");
+	   LocalResources.TITLE=mxResources.get('notice config');
+	   LocalResources.NEW=mxResources.get("new");
+	   LocalResources.REMOVE=mxResources.get("remove");
+	   LocalResources.UP=mxResources.get("up");
+	   LocalResources.DOWN=mxResources.get("down");
+	   LocalResources.NoticeTime=mxResources.get('NoticeTime');
+	   LocalResources.Isreplay=mxResources.get('Isreplay');
+	   LocalResources.NoticesCondition=mxResources.get('NoticesCondition');
+	   LocalResources.NoticesTemplate=mxResources.get('NoticesTemplate');
+	   LocalResources.noticeKind=mxResources.get('noticeKind');
+	   LocalResources.ReceivePeople=mxResources.get('ReceivePeople');
+	   LocalResources.TaskInstanceCreate=mxResources.get('TaskInstanceCreate');
+	   LocalResources.TaskInstanceComplete=mxResources.get('TaskInstanceComplete');
+	   LocalResources.TaskInstanceOverTime=mxResources.get('TaskInstanceOverTime');
+	   LocalResources.ProcessInstanceOverTime=mxResources.get('ProcessInstanceOverTime');
+	   LocalResources.EMail=mxResources.get('EMail');
+	   LocalResources.MessageCenter=mxResources.get('MessageCenter');
+	   LocalResources.SMS=mxResources.get('SMS');
+  
+	var editIndex = undefined; 
+	function endEditing(){ 
+		if (editIndex == undefined){return true} 
+		if ($('#dg').datagrid('validateRow', editIndex)){ 
+			//回写noticeTime
+			var ed = $('#dg').datagrid('getEditor', {index:editIndex,field:'noticeTime'}); 
+			var noticeTimeName = $(ed.target).combobox('getText'); 
+			$('#dg').datagrid('getRows')[editIndex]['noticeTimeName'] = noticeTimeName; 
+			//回写noticeKind
+			var ed1 = $('#dg').datagrid('getEditor', {index:editIndex,field:'noticeKind'}); 
+			var noticeKindName = $(ed1.target).combobox('getText'); 
+			$('#dg').datagrid('getRows')[editIndex]['noticeKindName'] = noticeKindName; 
+			$('#dg').datagrid('endEdit', editIndex); 
+			editIndex = undefined; 
+			return true; 
+			} else { 
+				return false; 
+				} 
+	} 
+	function onClickRow(index){ 
+		if (editIndex != index){ 
+			if (endEditing()){	 
+			$('#dg').datagrid('selectRow', index) 
+			.datagrid('beginEdit', index); 
+    		editIndex = index; 
+			} else { 
+				$('#dg').datagrid('selectRow', editIndex); 
+				} 
+		} 
+	} 
+	function append(){
+	if (endEditing()){	 
+		$('#dg').datagrid('appendRow',{status:''}); 
+		editIndex = $('#dg').datagrid('getRows').length-1; 
+		$('#dg').datagrid('selectRow', editIndex) 
+		.datagrid('beginEdit', editIndex);
+	 } 
+	} 
+	function remove(){ 
+		if (editIndex == undefined){return} 
+		$('#dg').datagrid('cancelEdit', editIndex) 
+		.datagrid('deleteRow', editIndex); 
+		editIndex = undefined; 
+	} 
+	//与上一行交换位置
+  function onUp(){
+  	 if (editIndex == undefined){return}
+	 var editrow = $('#dg').datagrid('getSelected');
+	 var currentIndex = $('#dg').datagrid('getRowIndex',editrow);//获得当前行的index
+ 	 if(currentIndex>0){//当不是第一行的时候
+ 		 insertRow(currentIndex,-1,editrow);   	
+ 	  }else{
+		$('#dg').datagrid('endEdit', currentIndex);
+	  }
+	  editIndex = undefined;
+	}
+	//与下一行进行交换
+	function onDown(){
+		if (editIndex == undefined){return}
+	    var editrow = $('#dg').datagrid('getSelected');
+	    var currentIndex = $('#dg').datagrid('getRowIndex',editrow);//获得当前行的index
+		//获得当前数据
+		var len = $('#dg').last().prevAll().length;
+		if(currentIndex<len-1){//当不是最后一行
+		    insertRow(currentIndex,1,editrow);		
+		}else{
+			$('#dg').datagrid('endEdit', currentIndex);
+		}
+	editIndex = undefined;
+	}
+	//插入一个新行，moveIndex为需要插入的位置与当前位置的差
+	function insertRow(currentIndex,moveIndex,editrow){
+		$('#dg').datagrid('endEdit', currentIndex)
+  			.datagrid('deleteRow', currentIndex);
+			//向后插入一个新行
+		$('#dg').datagrid('insertRow',{
+ 			index:currentIndex+moveIndex,
+  			row:editrow
+  		}); 
+	}
+	function onOK(){ 
+	if (endEditing()){ 
+		$('#dg').datagrid('acceptChanges'); 
+		} 
+		var noticesTable = $('#dg').datagrid('getData');
+		window.returnValue=noticesTable.rows;
+    	window.close(); 
+	} 
+	function onOK(){ 
+	if (endEditing()){ 
+		$('#dg').datagrid('acceptChanges'); 
+		}	 
+		var returnValue = new Array();
+		var noticesTable = $('#dg').datagrid('getData');
+		var rows= noticesTable.rows;
+		for(var i=0;i<rows.length;i++){//把行数据转化为对象
+		    var notice = new DefaultNoticeDefinition();//对象数组中对象的类型
+			notice.receivers= rows[i].receivePeople;
+			notice.noticeType=rows[i].noticeKind;
+			notice.contentTemplate= rows[i].noticesTemplate;
+			notice.noticeTime= rows[i].noticeTime;
+			notice.condition=rows[i].noticesCondition;
+			notice.hasReceipt=rows[i].isreplay;
+			returnValue.push(notice);
+		}	
+		window.returnValue=returnValue;//返回对象数组
+    	window.close(); 
+	} 
+	function onCancel(){
+		window.close(); 
+	}
+	function initialize(){
+ 		document.title = LocalResources.TITLE;
+	    document.getElementById('ok').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.OK+"</SPAN></SPAN>";
+	    document.getElementById('cancel').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.CANCEL+"</SPAN></SPAN>";
+	    document.getElementById('new').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.NEW+"</SPAN></SPAN>";
+	    document.getElementById('remove').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.REMOVE+"</SPAN></SPAN>";
+	    document.getElementById('up').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.UP+"</SPAN></SPAN>";
+	    document.getElementById('down').innerHTML = "<SPAN class=l-btn-left><SPAN class=l-btn-text>"+LocalResources.DOWN+"</SPAN></SPAN>";
+ 		
+ 		$('#dg').datagrid({
+        columns:[[
+
+        {field:'noticeTime',title:LocalResources.NoticeTime,width:100,align:'center',formatter:function(value,row){ return row.noticeTimeName;}},
+
+        {field:'isreplay',title:LocalResources.Isreplay,width:80,align:'center'},
+
+        {field:'noticesCondition',title:LocalResources.NoticesCondition,width:80,align:'center',editor:'text'},
+
+        {field:'noticesTemplate',title:LocalResources.NoticesTemplate,width:80,align:'center',editor:'text'},
+        
+        {field:'noticeKind',title:LocalResources.noticeKind,width:90,align:'center',formatter:function(value,row){ return row.noticeKindName;}},
+        {field:'receivePeople',title:LocalResources.ReceivePeople,width:100,align:'center'}
+        ]]
+
+      });	
+      	var noticeTime = $('#dg').datagrid('getColumnOption','noticeTime');
+	    noticeTime.editor={ 
+	                        type:'combobox', 
+	                        options:{ 
+	                        data:[{value:'TaskInstanceCreate',text:LocalResources.TaskInstanceCreate},{value:'TaskInstanceComplete',text:LocalResources.TaskInstanceComplete},{value:'TaskInstanceOverTime',text:LocalResources.TaskInstanceOverTime},{value:'ProcessInstanceOverTime',text:LocalResources.ProcessInstanceOverTime}]
+	                     } 
+	             }
+        var isreplay = $('#dg').datagrid('getColumnOption','isreplay');
+	    isreplay.editor={
+	       type:'checkbox',
+	       options: {
+	         on:'true',off:'false'
+	        }
+	       }
+	    var noticesCondition = $('#dg').datagrid('getColumnOption','noticesCondition');
+	    noticesCondition.editor={
+	       type:'expbox',
+	       options:{
+	       url:'../expression/expression.html',
+	       features:'dialogHeight:600px;dialogWidth:800px;center:yes'
+	      }
+	    } 
+           var noticesTemplate = $('#dg').datagrid('getColumnOption','noticesTemplate');
+	    noticesTemplate.editor={
+                type:'refcolumn',
+                options:{
+                  url:'../PropertyDialog/messageTemplate.html',
+                  features:'dialogHeight:500px;dialogWidth:800px;center:yes',gridid:'dg'
+                  }
+                }
+                
+	    var noticeKind = $('#dg').datagrid('getColumnOption','noticeKind');
+	    noticeKind.editor={ 
+	                        type:'combobox', 
+	                        options:{ 
+	                        data:[{value:'EMail',text:LocalResources.EMail},{value:'MessageCenter',text:LocalResources.MessageCenter},{value:'SMS',text:LocalResources.SMS}]
+	                     } 
+	             }  
+	    var receivePeople = $('#dg').datagrid('getColumnOption','receivePeople');
+	    receivePeople.editor={
+                type:'refcolumnbox',
+                options:{
+                 url:'./receivePeople.html',
+                 features:'dialogHeight:400px;dialogWidth:600px;center:yes'
+                 }
+               }       
+		var rows= new Array();
+		if (window.dialogArguments){
+			var value = window.dialogArguments;//得到的是JSON数据
+			var noticeArray= JSON.parse(value);//把json数据转化为对象
+			for(var i=0;i<noticeArray.length;i++){
+			var row= new Object();
+			row.receivePeople= noticeArray[i].receivers;
+			row.noticeKind=noticeArray[i].noticeType;
+			row.noticeKindName=mxResources.get(noticeArray[i].noticeType);
+			row.noticesTemplate= noticeArray[i].contentTemplate;
+			row.noticeTime= noticeArray[i].noticeTime;
+			row.noticeTimeName= mxResources.get(noticeArray[i].noticeTime);
+			row.noticesCondition=noticeArray[i].condition;
+			row.isreplay=noticeArray[i].hasReceipt;
+			rows.push(row);//构造行数据
+		}	
+		    $('#dg').datagrid('loadData',rows);//载入行数据
+		}
+		window.onunload=function(){
+			if(!window.returnValue)
+				window.returnValue = undefined;	
+		}
+	} 
+	</script> 
+	</body> 
+	</html>

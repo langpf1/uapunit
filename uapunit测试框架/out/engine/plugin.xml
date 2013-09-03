@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin>
+<extension-point point="tasknewcreated" title="新产生任务信息发送" classname="uap.workflow.engine.message.ITaskCreatedMessageSender">
+	<extension isactive="true" id="taskcreatedemail" title="email" classname="uap.workflow.engine.message.TaskCreatedEmailMessSender"/>
+	<extension isactive="true" id="taskcreatedinner" title="站内短信" classname="uap.workflow.engine.message.TaskCreatedInnerMessSender"/>
+    <extension isactive="true" id="taskcreatedphone" title="手机短信" classname="uap.workflow.engine.message.TaskCreatedPhoneMessSender"/>
+    <extension isactive="true" id="taskcreatedmsgcenter" title="消息中心" classname="uap.workflow.engine.message.TaskCreatedMsgCenterSender"/>
+</extension-point>
+<extension-point point="taskcompleted" title="任务完成消息发送" classname="uap.workflow.engine.message.ITaskCompletedMessageSender">
+	<extension isactive="true" id="taskcompletedemail" title="email" classname="uap.workflow.engine.message.TaskCompledEmailSender"/>
+    <extension isactive="true" id="taskcompletedinner" title="站内短信" classname="uap.workflow.engine.message.TaskCompledInnerMessSender"/>
+</extension-point>
+<extension-point point="taskovertime" title="超时任务消息发送" classname="uap.workflow.engine.message.ITaskOverTimeMessageSender">
+	<extension isactive="true" id="taskovertimeemail" title="email" classname="uap.workflow.engine.message.TaskOverTimeEmailSender"/>
+    <extension isactive="true" id="taskovertimeinner" title="站内信息" classname="uap.workflow.engine.message.TaskOverTimeInnerMessSender"/>
+</extension-point>
+<extension-point point="taskurege" title="催办信息发送" classname="uap.workflow.engine.message.ITaskUregeMessageSender">
+	<extension isactive="true" id="taskuregeemail" title="email" classname="uap.workflow.engine.message.TaskUergeEmailSender"/>
+	<extension isactive="true" id="taskuregeinner" title="站内短信" classname="uap.workflow.engine.message.TaskUergeInnerMessSender"/>
+</extension-point>
+</plugin>

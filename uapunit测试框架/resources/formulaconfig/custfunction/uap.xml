@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="gb2312"?>
+<formula-array>
+<formula>
+  <customType>0</customType>
+  <functionName>getExchangedResult</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.RetriveExchangeResult</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getUserCode</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getUserID</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getGroupCode</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getGroupID</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getBizDate</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getBizDateTime</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getLangCode</functionName>
+  <functionClass>uap.workflow.bizimpl.expression.SystemEnvVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getApproveResult</functionName>
+  <functionClass>uap.workflow.engine.el.ApproveResultVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getApproveNote</functionName>
+  <functionClass>uap.workflow.engine.el.ApproveResultVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getAttachments</functionName>
+  <functionClass>uap.workflow.engine.el.ApproveResultVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getCCTo</functionName>
+  <functionClass>uap.workflow.engine.el.ApproveResultVariables</functionClass>
+</formula>
+<formula>
+  <customType>0</customType>
+  <functionName>getAssignedTo</functionName>
+  <functionClass>uap.workflow.engine.el.ApproveResultVariables</functionClass>
+</formula>
+</formula-array>
+
+	
+	
+	
+	
+	
+	
+	
+	

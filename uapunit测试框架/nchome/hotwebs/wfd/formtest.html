@@ -1,0 +1,59 @@
+<!DOCTYPE HTML >
+<html>
+	<head>
+ 		<script type="text/javascript" src="./js/libs/easyui/jquery-1.8.0.js"> </script>
+    	<script type="text/javascript" src="./js/libs/easyui/jquery.easyui.min.js"> </script>
+    	<script type="text/javascript" src="./js/libs/json/json2.js"></script>
+		<script type="text/javascript">
+			 //提交
+			 function submit(){
+					//前台向后台传输的是 js对象
+					var  form = new Object();
+					form.action = "SAVE0001AA1000000001AAOO";
+					form.descripe = "这是一个单据";
+					$.ajax({  
+					url: 'http://localhost:80/wfd/runtime/wfform/approve/',  
+					type: 'POST', 
+					data: form,
+					dataType: 'json',   
+					error: function(){  
+					  alert('JSON 数据传输错误');  
+					},  
+					success: function(data){  
+					  alert(data.result);
+					}  
+				}); 
+			}
+			 // 审批 
+			function approve(){
+					//前台向后台传输的是 js对象
+					var  form = new Object();
+					form.action = "APPROVE0001AA1000000001AAOO";
+					form.billtype = "10kH";
+					form.descripe = "这是一个单据";
+					$.ajax({  
+					url: 'http://localhost:8080/wfd/runtime/wfform',  
+					type: 'POST', 
+					data: form,
+					dataType: 'json',   
+					error: function(){  
+					  alert('JSON 数据传输错误');  
+					},  
+					success: function(data){  
+					  alert(data);
+					}  
+				}); 
+			}
+		</script>
+	</head>
+	<body>
+		<center><h1>Form Test</h1></center>
+		<br/><br/><br/><br/>
+		<div id="list">
+		<a href='javascript:void(0);' id='formaction1' onclick='submit();'>submit</a> &nbsp &nbsp;
+		<a href='javascript:void(0);' id='formaction2' onclick='approve();'>approve</a> &nbsp &nbsp;
+		<a href='javascript:void(0);' id='formaction3' onclick='reject();'>reject</a> &nbsp &nbsp;
+		<a href='javascript:void(0);' id='formaction4' onclick='abandoned();'>abandoned</a> &nbsp &nbsp;
+		</div>
+	</body>
+</html>
