@@ -1,6 +1,0 @@
-[2013 05 28 16:18:51,124 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
-[2013 05 28 16:18:51,140 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
-[2013 05 28 16:18:57,997 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
-[2013 05 28 16:18:58,012 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
-[2013 05 28 16:18:59,309 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)
-[2013 05 28 16:18:59,309 ERROR] [main] com.yonyou.uat.context.impl.LogFileManagerImpl - java.io.FileNotFoundException: D:\nchome\newpf\nchome61\nc61gold\nclogs\testlog1.log (系统找不到指定的路径。)

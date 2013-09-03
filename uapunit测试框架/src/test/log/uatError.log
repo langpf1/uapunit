@@ -1,4 +1,0 @@
-[2013 06 03 14:33:50,346 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
-[2013 06 03 14:33:50,346 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
-[2013 06 03 14:35:56,863 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
-[2013 06 03 14:35:56,863 ERROR] [main] com.yonyou.uat.util.MiddlewareUtils - java.io.FileNotFoundException: resources\configure\uat.properties (系统找不到指定的路径。)
